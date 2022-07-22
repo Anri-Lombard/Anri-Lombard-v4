@@ -1,12 +1,10 @@
-import styles from "../styles/About.module.css"
-
 function About() {
     return (
         <div className="">
-            <div className={styles.profile}>
+            <div className="">
                 Box describing me in a fun way with animations
             </div>
-            <div className={styles.codeBlock}>
+            <div className="">
                 Code with cool animation making it fun to learn about me - perhaps interactive<br />
                 Perhaps interactive and live coding
             </div>

@@ -21,35 +21,41 @@ a {
 
 /* --- Navbar ---  */
 
-.navbar {
-  padding: 2rem;
-  font-size: 1.5rem;
-}
-
-.navbar-brand {
-  font-size: 2.5rem;
-}
-
-.navbar-item {
-  /* background: blue; */
-  display:inline-block;
-  position: relative;
-}
-
-.navbar-item:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #0087ca;
-  transform-origin: bottom left;
-  transition: transform 0.25s ease-out;
-}
-
-.navbar-item:hover:after {
-  transform: scale(1);
-  transform-origin: bottom left;
+@layer components {
+  .navbar {
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .navbar-brand {
+    font-size: 2.5rem;
+  }
+  
+  .navbar-item {
+    @apply block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 
+      md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400
+      md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white 
+      md:dark:hover:bg-transparent dark:border-gray-700;
+    /* background: blue; */
+    display:inline-block;
+    position: relative;
+  }
+  
+  .navbar-item:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .navbar-item:hover:after {
+    transform: scale(1);
+    transform-origin: bottom left;
+  }
 }
