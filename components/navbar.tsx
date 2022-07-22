@@ -13,9 +13,9 @@ function Navbar() {
     const linkStyles = "block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700";
 
     return (
-        <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-            <div className="container flex flex-wrap justify-between items-center mx-auto cursor-pointer">
-                <div>
+        <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 sticky top-0 left-0 right-0">
+            <div className="container flex flex-wrap justify-between items-center mx-auto p-7">
+                <div className="cursor-pointer">
                     <Link href="/">
                         <span className="flex items-center self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                             Anri Lombard
@@ -38,19 +38,22 @@ function Navbar() {
                             <Link href="/projects">Projects</Link>
                         </li>
                         <li className="navbar-item">
+                            <Link href="/contact">Contact</Link>
+                        </li>
+                        <li className="navbar-item">
                             <Link href="https://anri-lombard.github.io/">Blog</Link>
                         </li>
-                        <li className="cursor-pointer navbar-item">
+                        <li className="cursor-pointer hover:opacity-50">
                             <Link href="https://github.com/Anri-Lombard">
                                 <FontAwesomeIcon icon={faGithub} />
                             </Link>
                         </li>
-                        <li className="cursor-pointer navbar-item">
+                        <li className="cursor-pointer hover:opacity-50">
                             <Link href="https://www.linkedin.com/in/anri-lombard-ab37ab201/">
                                 <FontAwesomeIcon icon={faLinkedin} />
                             </Link>
                         </li>
-                        <li className="cursor-pointer navbar-item">
+                        <li className="cursor-pointer hover:opacity-50">
                             <Link href="https://www.linkedin.com/in/anri-lombard-ab37ab201/">
                                 <FontAwesomeIcon icon={faCircleHalfStroke} />
                             </Link>
