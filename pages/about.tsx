@@ -1,6 +1,6 @@
 function About() {
     return (
-        <div className="">
+        <div className="min-h-screen">
             <div className="">
                 Box describing me in a fun way with animations
             </div>
