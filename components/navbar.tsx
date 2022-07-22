@@ -1,40 +1,21 @@
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faGithub,
+    faLinkedin
+} from "@fortawesome/free-brands-svg-icons";
 
 function Navbar() {
-    return (
-        // <div className="navbar flex flex-row">
-        //     <div className="basis-1/4 navbar-brand self-center hover:animate-pulse">
-        //         <Link href="/">
-        //             Anri Lombard
-        //         </Link>
-        //     </div>
-        //     {/* <div className=""></div> */}
-        //     <div className="basis-1/5 self-center navbar-item">
-        //         <Link href="/about">
-        //             About
-        //         </Link>
-        //     </div>
-        //     <div className="basis-1/5 self-center navbar-item">
-        //         <Link href="/learning">
-        //             Learning
-        //         </Link>
-        //     </div>
-        //     <div className="basis-1/5 self-center navbar-item">
-        //         <Link href="/projects">
-        //             Projects
-        //         </Link>
-        //     </div>
-        //     <div className="basis-1/5 self-center navbar-item">
-        //         <Link href="https://anri-lombard.github.io/">
-        //             Blog
-        //         </Link> and SM
-        //     </div>
-        // </div>
+    // Styling 
+    const linkStyles = "block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700";
 
+    return (
         <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-            <div className="container flex flex-wrap justify-between items-center mx-auto">
-                <Link href="/" className="flex items-center">
-                    <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Anri Lombard</span>
+            <div className="container flex flex-wrap justify-between items-center mx-auto cursor-pointer">
+                <Link href="/">
+                    <span className="flex items-center self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+                    Anri Lombard
+                    </span>
                 </Link>
                 <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                     <span className="sr-only">Open main menu</span>
@@ -42,17 +23,27 @@ function Navbar() {
                 </button>
                 <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-                        <li>
-                            <Link href="/about" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Link>
+                        <li className={linkStyles}>
+                            <Link href="/about">About</Link>
                         </li>
-                        <li>
-                            <Link href="/learning" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Learning</Link>
+                        <li className={linkStyles}>
+                            <Link href="/learning">Learning</Link>
                         </li>
-                        <li>
-                            <a href="/projects" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
+                        <li className={linkStyles}>
+                            <Link href="/projects">Projects</Link>
                         </li>
-                        <li>
-                            <a href="https://anri-lombard.github.io/" className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+                        <li className={linkStyles}>
+                            <Link href="https://anri-lombard.github.io/">Blog</Link>
+                        </li>
+                        <li className={`cursor-pointer ${linkStyles}`}>
+                            <Link href="https://github.com/Anri-Lombard">
+                                <FontAwesomeIcon icon={faGithub} />
+                            </Link>
+                        </li>
+                        <li className={`cursor-pointer ${linkStyles}`}>
+                            <Link href="https://www.linkedin.com/in/anri-lombard-ab37ab201/">
+                                <FontAwesomeIcon icon={faLinkedin} />
+                            </Link>
                         </li>
                     </ul>
                 </div>
