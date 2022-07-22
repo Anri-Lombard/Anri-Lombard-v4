@@ -5,7 +5,7 @@
 html,
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 1rem;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -24,5 +24,32 @@ a {
 .navbar {
   padding: 2rem;
   font-size: 1.5rem;
-  space-between: 1rem;;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+}
+
+.navbar-item {
+  /* background: blue; */
+  display:inline-block;
+  position: relative;
+}
+
+.navbar-item:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar-item:hover:after {
+  transform: scale(1);
+  transform-origin: bottom left;
 }
