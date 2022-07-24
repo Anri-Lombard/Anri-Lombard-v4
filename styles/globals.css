@@ -32,13 +32,19 @@ a {
   
   .navbar-item {
     @apply block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 
-      md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400
+      md:hover:bg-transparent md:border-0 md:p-0 dark:text-gray-400
       md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white 
       md:dark:hover:bg-transparent dark:border-gray-700;
     /* background: blue; */
     display:inline-block;
     position: relative;
   }
+
+  .active {
+    font-weight: bold;
+  }
+
+  
   
   .navbar-item:after {
     content: '';
@@ -48,7 +54,7 @@ a {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0087ca;
+    background-color: gray;
     transform-origin: bottom left;
     transition: transform 0.25s ease-out;
   }
@@ -56,5 +62,30 @@ a {
   .navbar-item:hover:after {
     transform: scale(1);
     transform-origin: bottom left;
+  }
+
+  /* Profile */
+  .profile {
+    @apply bg-sky-100 border-solid border-2 border-cyan-700 drop-shadow-md
+      transition duration-200 ease-out hover:scale-105 hover:ease-in
+      hover:drop-shadow-2xl w-3/4 place-self-center
+  }
+
+  .profile-img {
+    @apply w-12 z-0
+  }
+
+  .profile-item-1 {
+    @apply bg-sky-50 p-5 grow
+
+  }
+
+  .profile-item-2 {
+    @apply bg-sky-300 p-5 grow
+  }
+
+  /* Pages */
+  .page-intro {
+    @apply self-center text-center p-32 bg-sky-300 w-screen
   }
 }
