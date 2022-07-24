@@ -43,8 +43,6 @@ a {
   .active {
     font-weight: bold;
   }
-
-  
   
   .navbar-item:after {
     content: '';
@@ -55,7 +53,7 @@ a {
     bottom: 0;
     left: 0;
     background-color: gray;
-    transform-origin: bottom left;
+    transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
   
@@ -87,5 +85,23 @@ a {
   /* Pages */
   .page-intro {
     @apply self-center text-center p-32 bg-sky-300 w-screen
+  }
+
+  /* Learning */
+  .box {
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+
+    @apply bg-sky-500 border-solid border-2 border-sky-800 rounded drop-shadow-sm hover:drop-shadow-2xl
+      hover:scale-105 transition duration-100
+  }
+  
+  .heading {
+    @apply font-medium text-2xl p-2 m-10 place-self-center
+  }
+
+  .box-container {
+    @apply flex flex-row flex-wrap place-content-center
   }
 }

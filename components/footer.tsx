@@ -18,9 +18,9 @@ function Footer() {
                         <div>
                             &copy; 2022 Anri Lombard
                         </div>
-                        <div>
+                        {/* <div>
                             Page links
-                        </div>
+                        </div> */}
                         <div className="flex space-x-5">
                             <span className="cursor-pointer hover:opacity-40">
                                 <Link href="https://github.com/Anri-Lombard">
