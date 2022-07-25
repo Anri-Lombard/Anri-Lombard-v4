@@ -1,5 +1,4 @@
-import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
+import PopupProfile from '../components/popupProfile';
 
 function Learning() {
     const learning = {
@@ -10,9 +9,9 @@ function Learning() {
     }
     const popup = (topic: any, details: any) => {
         return (
-            <Popup trigger={<button className="button box">{topic}</button>} modal>
+            <PopupProfile trigger={<button className="button box">{topic}</button>} modal>
                 <span>{details}</span>
-            </Popup>
+            </PopupProfile>
         )
     }
 
@@ -23,7 +22,6 @@ function Learning() {
             </div>
             <h3 className="heading">University</h3>
             <div className="box-container">
-                <div className="box"></div>
                 <div className="box"></div>
                 <div className="box"></div>
                 <div className="box"></div>
