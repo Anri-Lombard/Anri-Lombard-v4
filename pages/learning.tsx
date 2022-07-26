@@ -5,6 +5,7 @@ function Learning() {
         "university": [
             {"MAM1000W": "This was cool"},
             {"MAM2000W": "This is still cool"},
+            {"STA1006S": "This was kinda nice"}
         ]
     }
     const popup = (topic: any, details: any) => {
