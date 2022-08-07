@@ -93,10 +93,10 @@ a {
     width: 300px;
     margin: 10px;
 
-    @apply bg-sky-500 border-solid border-2 border-sky-800 rounded drop-shadow-sm 
+    @apply bg-sky-500 border-solid border-2 border-sky-800 rounded drop-shadow-sm
   }
-  .box:hover {
-    animation: flip 0.5s linear;
+  .flip {
+    animation: flip 0.5s ease-in-out;
   }
   
   .heading {
