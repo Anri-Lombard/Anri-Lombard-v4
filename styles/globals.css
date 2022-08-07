@@ -93,8 +93,10 @@ a {
     width: 300px;
     margin: 10px;
 
-    @apply bg-sky-500 border-solid border-2 border-sky-800 rounded drop-shadow-sm hover:drop-shadow-2xl
-      hover:scale-105 transition duration-100
+    @apply bg-sky-500 border-solid border-2 border-sky-800 rounded drop-shadow-sm 
+  }
+  .box:hover {
+    animation: flip 0.5s linear;
   }
   
   .heading {
@@ -104,4 +106,18 @@ a {
   .box-container {
     @apply flex flex-row flex-wrap place-content-center
   }
+
+  @keyframes flip {
+    0% {
+      transform: scale(1, 1)
+    }
+    50% {
+      transform: scale(0, 1.2);
+
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
 }
+

@@ -8,13 +8,7 @@ function Learning() {
             {"STA1006S": "This was kinda nice"}
         ]
     }
-    const popup = (topic: any, details: any) => {
-        return (
-            <PopupProfile trigger={<button className="button box">{topic}</button>} modal>
-                <span>{details}</span>
-            </PopupProfile>
-        )
-    }
+    
 
     return (
         <div className="min-h-screen flex flex-col mx-10">
@@ -23,14 +17,11 @@ function Learning() {
             </div>
             <h3 className="heading">University</h3>
             <div className="box-container">
-                <div className="box"></div>
-                <div className="box"></div>
+                <div className="box flipper"></div>
                 <div className="box"></div>
                 <div className="box"></div>
             </div>
-            {/* <div>
-                <span>Courses</span>
-            </div> */}
+            
             <h3 className="heading">Outside University</h3>
             <div className="box-container">
                 <div className="box"></div>
@@ -39,9 +30,6 @@ function Learning() {
                 <div className="box"></div>
                 <div className="box"></div>
             </div>
-            {/* <div>
-                Make popups with brief descriptions of everything
-            </div> */}
         </div>
     )
 }
