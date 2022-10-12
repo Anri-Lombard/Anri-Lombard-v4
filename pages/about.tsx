@@ -20,23 +20,18 @@ function About() {
                 </div>
                 <div className="w-6/12 flex flex-col">
                     <span className="profile-item-1">
-                        I am a <b>Full Stack Developer</b>, nascent <b>Machine Learning Engineer</b>,&nbsp;
-                        <b>University Research Student</b>, hobbyist <b>Blockchain Developer</b>, and avid&nbsp;
-                        <b>Open Source Contributor</b>
+                        I am a <b>Full Stack Developer</b>, nascent <b>Machine Learning Engineer</b>, and a <b>University Undergraduate Researcher</b>.
                     </span>
                     <span className="profile-item-2">
-                        In 2022 I turned <b>20 years old</b> and spend this year studying <b>Computer Science</b>
-                        &nbsp;and <b>Mathematical Statistics</b> in university
+                        In 2022 I turned <b>20 years old</b> and am spending this year studying <b>Computer Science</b>
+                        &nbsp;and <b>Mathematical Statistics</b> in university.
                     </span>
                     <span className="profile-item-1">
                         My favourite activities are <b>Studying</b>, <b>Programming</b>, <b>Reading</b>,&nbsp;
-                        <b>Exercising</b>, <b>Writing</b>, <b>Taking Friends On Memorable Adventures</b> and, most&nbsp;
-                        recently, <b>Watching Anime With Friends</b>
+                        <b>Exercising</b>, and <b>Writing</b>.
                     </span>
                     <span className="profile-item-2">
-                        My least favourite activities are <b>Paying For Gas</b>, <b>Writing Abritrary University Exams</b>,
-                        <b>Watching Anime Alone</b>, <b>Doing Dishes</b>, <b>Doing Laundry</b>, and&nbsp;
-                        <b>Commuting</b>
+                        My least favourite activities are <b>Cooking</b>, <b>Cleaning,</b> <b>Commuting</b> and <b>Drinking Coffee</b>.
                     </span>
                 </div>
             </div>

@@ -24,6 +24,11 @@ a {
   .navbar {
     padding: 2rem;
     font-size: 1.5rem;
+    /* -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    transition: all 500ms ease; */
+    @apply transition ease-out duration-1000
   }
   
   .navbar-brand {
@@ -36,7 +41,7 @@ a {
       md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white 
       md:dark:hover:bg-transparent dark:border-gray-700;
     /* background: blue; */
-    display:inline-block;
+    display: inline-block;
     position: relative;
   }
 
@@ -66,7 +71,7 @@ a {
   .profile {
     @apply bg-sky-100 border-solid border-2 border-cyan-700 drop-shadow-md
       transition duration-200 ease-out hover:scale-105 hover:ease-in
-      hover:drop-shadow-2xl w-3/4 place-self-center
+      hover:drop-shadow-2xl w-3/4 place-self-center rounded-sm
   }
 
   .profile-img {

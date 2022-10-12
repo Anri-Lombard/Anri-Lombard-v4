@@ -62,10 +62,6 @@ function Learning() {
                         >{course.turned ? course.description : course.name}</button>
                     ))
                 }
-                {/* <button className="box flipper"></button>
-                <div className="box flipper"></div>
-                <div className="box"></div>
-                <div className="box"></div> */}
             </div>
 
             <h3 className="heading">Outside University</h3>

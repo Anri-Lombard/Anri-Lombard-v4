@@ -16,11 +16,9 @@ function Navbar() {
     const handleScroll = () => {
         if (window.scrollY < 30) {
             document.getElementById("navbar").classList.add("p-7")
-        } else if (window.scrollY < 50 && window.scrollY >= 30) {
-            document.getElementById("navbar").classList.add("p-5")
-            document.getElementById("navbar").classList.remove("p-7")
-        } else if (window.scrollY >= 50) {
-            document.getElementById("navbar").classList.remove("p-5")
+            document.getElementById("navbar").classList.remove("p-2")
+         } else if (window.scrollY >= 30) {
+            document.getElementById("navbar").classList.add("p-2")
             document.getElementById("navbar").classList.remove("p-7")
         }
     };
