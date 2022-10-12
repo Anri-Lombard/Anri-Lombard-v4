@@ -14,12 +14,14 @@ function Navbar() {
     const router = useRouter();
 
     const handleScroll = () => {
-        if (window.scrollY < 30) {
-            document.getElementById("navbar").classList.add("p-7")
-            document.getElementById("navbar").classList.remove("p-2")
-         } else if (window.scrollY >= 30) {
-            document.getElementById("navbar").classList.add("p-2")
-            document.getElementById("navbar").classList.remove("p-7")
+        if (window.scrollY < 110) {
+            document.getElementById("navbar").classList.add("opacity-100")
+            document.getElementById("navbar").classList.remove("opacity-40")
+            document.getElementById("nav-holder").classList.remove("scale-75")
+         } else if (window.scrollY >= 110) {
+            document.getElementById("nav-holder").classList.add("scale-75")
+            document.getElementById("navbar").classList.add("opacity-40")
+            document.getElementById("navbar").classList.remove("opacity-100")
         }
     };
 
@@ -29,7 +31,7 @@ function Navbar() {
     });
 
     return (
-        <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 sticky top-0 left-0 right-0 z-10">
+        <nav id="nav-holder" className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 sticky top-0 left-0 right-0 z-10 ease-in duration-200">
             <div id="navbar" className="container flex flex-wrap justify-between items-center mx-auto p-7">
                 <div className="cursor-pointer">
                     <Link href="/">
