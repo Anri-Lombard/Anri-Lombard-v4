@@ -13,7 +13,8 @@ function Learning() {
             },
             {
                 name: "MAM3",
-                description: "Indeed",
+                description: "Indeed", },
+                {
                 name: "MAM1019H",
                 description: "[Rating: 2/5] Besides a very interresting and helpful tutor, this course did not do the mathematics justice. The self study led me down a rabit hole of desciphering proofs, which was useful",
             },
