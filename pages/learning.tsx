@@ -4,19 +4,16 @@ function Learning() {
     const [learning, setLearning] = useState({
         "university": [
             {
-                name: "MAM1",
-                description: "Indeed",
-                turned: false
+                name: "MAM1000W",
+                description: "[Rating: 4/5] The only drawback this course had was it's occurence during Covid, so I couldn't interact with lecturers to grasp the content well, but the math recap from high school was fantastic!",
             },
             {
-                name: "MAM2",
-                description: "Indeed",
-                turned: false
+                name: "MAM2000W",
+                description: "[Rating: 5/5] This course was made up of 4 modules: (1) Linear Algebra, (2) Advanced Calculus, (3) Real Analysis",
             },
             {
                 name: "MAM3",
                 description: "Indeed",
-                turned: false
             },
         ]
     })
@@ -33,14 +30,17 @@ function Learning() {
             return
         }
 
-        // setLearning(!course.turned)
+        // Toggle element style for visibility when clicked
+        if (element.classList.contains("scale-150"))
+            element.classList.remove("scale-150", "z-10")
+        else
+            element.classList.add("scale-150", "z-10")
 
-        course.turned = !course.turned;
-        
-        element.classList.add("flip");
-        setTimeout(() => {
-            element.classList.remove("flip");
-        }, 500)
+        // Toggle course name and description on click
+        if (element.innerHTML === course.description)
+            element.innerHTML = course.name
+        else
+            element.innerHTML = course.description
         
     }
 
@@ -57,11 +57,17 @@ function Learning() {
                         <button 
                             key={course.name} 
                             id={course.name} 
-                            className="box"
+                            className="box transition duration-150 ease-out hover:ease-in"
                             onClick={() => flip(course)}
-                        >{course.turned ? course.description : course.name}</button>
+                        >
+                            <div>{course.name}</div>
+                        </button>
                     ))
                 }
+                {/* <button className="box flipper"></button>
+                <div className="box flipper"></div>
+                <div className="box"></div>
+                <div className="box"></div> */}
             </div>
 
             <h3 className="heading">Outside University</h3>

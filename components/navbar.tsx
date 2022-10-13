@@ -13,15 +13,20 @@ import { useRouter } from "next/router";
 function Navbar() {
     const router = useRouter();
 
+    
     const handleScroll = () => {
-        if (window.scrollY < 110) {
-            document.getElementById("navbar").classList.add("opacity-100")
-            document.getElementById("navbar").classList.remove("opacity-40")
-            document.getElementById("nav-holder").classList.remove("scale-75")
-         } else if (window.scrollY >= 110) {
-            document.getElementById("nav-holder").classList.add("scale-75")
-            document.getElementById("navbar").classList.add("opacity-40")
-            document.getElementById("navbar").classList.remove("opacity-100")
+        const navbar = document.getElementById("navbar");
+        const navbar_holder = document.getElementById("nav-holder")
+        if (navbar != null && navbar_holder != null) {
+            if (window.scrollY < 120) {
+                navbar.classList.add("opacity-100")
+                navbar.classList.remove("opacity-40")
+                navbar_holder.classList.remove("scale-75", "z-20")
+             } else if (window.scrollY >= 120) {
+                navbar_holder.classList.add("scale-75", "z-20")
+                navbar.classList.add("opacity-40")
+                navbar.classList.remove("opacity-100")
+            }
         }
     };
 
@@ -32,7 +37,7 @@ function Navbar() {
 
     return (
         <nav id="nav-holder" className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 sticky top-0 left-0 right-0 z-10 ease-in duration-200">
-            <div id="navbar" className="container flex flex-wrap justify-between items-center mx-auto p-7">
+            <div id="navbar" className="container flex flex-wrap justify-between items-center mx-auto p-7 ease-in duration-300">
                 <div className="cursor-pointer">
                     <Link href="/">
                         <span className="flex items-center self-center text-xl font-semibold whitespace-nowrap dark:text-white">

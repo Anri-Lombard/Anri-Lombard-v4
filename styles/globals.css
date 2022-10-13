@@ -98,7 +98,7 @@ a {
     width: 300px;
     margin: 10px;
 
-    @apply bg-sky-500 border-solid border-2 border-sky-800 rounded drop-shadow-sm
+    @apply bg-sky-300 border-solid border-2 border-sky-800 rounded drop-shadow-sm p-5
   }
   .flip {
     animation: flip 0.5s ease-in-out;
@@ -111,6 +111,8 @@ a {
   .box-container {
     @apply flex flex-row flex-wrap place-content-center
   }
+
+  
 
   @keyframes flip {
     0% {
