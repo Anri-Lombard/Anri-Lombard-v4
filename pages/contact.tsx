@@ -5,8 +5,7 @@ function Contact() {
                 Contact
             </div>
             <div>
-                Email: anri.m.lombard@gmail.com
-                Cell: +27 63 563 8416
+                Hard-to-reach kinda dude... but try lmbanr001@myuct.ac.za if you feel adventurous, or visit your local librarian and ask for the weird white kid that shows up on Sundays.
             </div>
         </div>
     )
