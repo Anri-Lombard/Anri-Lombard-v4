@@ -18,9 +18,9 @@ a {
   box-sizing: border-box;
 }
 
-/* --- Navbar ---  */
 
 @layer components {
+  /* --- Navbar ---  */
   .navbar {
     padding: 2rem;
     font-size: 1.5rem;
@@ -183,6 +183,11 @@ a {
     border-bottom-left-radius: 0;
   }
 
+
+  /* --- Contacts ---  */
+  .dissapear {
+    @apply ease-out duration-150 hover:opacity-0
+  }
 
 
   @keyframes flip {
