@@ -66,15 +66,15 @@ a {
 
   /* Profile */
   .profile {
-    @apply bg-sky-100 border-solid border-2 border-cyan-700 drop-shadow-md transition duration-200 ease-out hover:scale-105 hover:ease-in hover:drop-shadow-2xl w-3/4 place-self-center rounded-sm
+    @apply bg-sky-100 border-solid border-2 border-cyan-700 drop-shadow-md transition duration-200 ease-out hover:shadow-2xl hover:scale-105 hover:ease-in hover:drop-shadow-2xl w-3/4 place-self-center rounded-sm
   }
 
   .profile-img {
-    @apply w-12 z-0
+    @apply z-0
   }
 
   .profile-item-1 {
-    @apply bg-sky-50 p-5 grow
+    @apply bg-sky-50 p-5
   }
 
   .profile-item-2 {
@@ -84,6 +84,11 @@ a {
   /* Pages */
   .page-intro {
     @apply self-center text-center p-32 bg-sky-300 w-screen
+  }
+
+  /* Projects */
+  .project {
+    @apply bg-sky-300 border-solid border-2 border-sky-800 rounded drop-shadow-sm p-5 h-96 lg:h-60 w-full my-3
   }
 
   /* Learning */
@@ -187,21 +192,5 @@ a {
   /* --- Contacts ---  */
   .dissapear {
     @apply ease-out duration-150 hover:opacity-0
-  }
-
-
-  @keyframes flip {
-    0% {
-      transform: scale(1, 1)
-    }
-
-    50% {
-      transform: scale(0, 1.2);
-
-    }
-
-    100% {
-      transform: scale(1, 1);
-    }
   }
 }

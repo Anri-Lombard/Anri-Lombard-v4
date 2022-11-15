@@ -14,11 +14,11 @@ function About() {
             <div className="page-intro">
                 About
             </div>
-            <div className="flex m-10 flex-row profile">
-                <div className="w-6/12 profile-img">
+            <div className="flex m-10 flex-col xl:flex-row profile">
+                <div className="flex-auto xl:w-full profile-img">
                     <Image src={AnriIMG} alt="Profile Picture" />
                 </div>
-                <div className="w-6/12 flex flex-col">
+                <div className="flex-auot flex flex-col">
                     <span className="profile-item-1">
                         I am a <b>Full Stack Developer</b>, nascent <b>Machine Learning Engineer</b>, and a <b>University Undergraduate Researcher</b>.
                     </span>

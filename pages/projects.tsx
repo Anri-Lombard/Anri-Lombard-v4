@@ -1,27 +1,99 @@
 function Projects() {
+    const projects = [
+        {
+            id: 1,
+            image_path: "",
+            title: "Coding Interview University",
+            topic: "Education",
+            description: "Helping students prepare for coding interviews, created by an Amazon engineer that came from a background without a CS degree.",
+            link: "https://github.com/jwasham/coding-interview-university",
+        },
+        {
+            id: 2,
+            image_path: "",
+            title: "Micrograd",
+            topic: "Machine Learning",
+            description: "A small Autograd library for Machine Learning, created by Andrej Karpathy, that builds out the basic functionality of scalar forward and backward passes used in training neural networks. It gives a fundamental understanding of what PyTorch does without all the complexity added for efficiency.",
+            link: "https://github.com/Anri-Lombard/micrograd",
+        },
+        {
+            id: 3,
+            image_path: "",
+            title: "Makemore",
+            topic: "Machine Learning",
+            description: "An autoregressive character-level language model for making more things built initially by Andrej Karpathy. In this project we went from using a basic bag-of-words model to completely deriving backward propogation from scratch using in-depth calculus and statistics. This project is ongoing, and we expect to build the model with a transformer once we near the end.",
+            link: "https://github.com/karpathy/makemore",
+        },
+        {
+            id: 4,
+            image_path: "",
+            title: "Various Generative Adverserial Network (GAN) Models",
+            topic: "Machine Learning",
+            description: "As part of a specialization on Adverserial Networks, we got to build 3-4 assignment projects for each of the 3 courses in the specialization. They ranged from simple digit classification to generating images, poetry, and music.",
+            link: "https://github.com/karpathy/makemore",
+        },
+        {
+            id: 5,
+            image_path: "",
+            title: "Defeasible Reasoning Tool",
+            topic: "Knowledge Representation Research",
+            description: "As part of an academically challenging research course in university, I built a \"Knowledge Representation Tool to Assist in Rational Closure Diagnosis\" which included the website and a GUI, which both allowed Novice researchers easier access to Rational Closure information and Experts to a GUI that allowed them to easilty get conclusions from a given defeasible query.",
+            link: "https://defeasible-reasoning.vercel.app/",
+        },
+        {
+            id: 6,
+            image_path: "",
+            title: "Various Deep Learning Models",
+            topic: "Machine Learning",
+            description: "As part of a specialization on Deep Learning by Andrew Ng, a leading researcher in the field and professor at Stanford University, we got to build 3-4 models for each of the 5 courses ranging from simple Neural Network understanding to Convolutional Neural Networks and Recurrent Neural Networks and Sequence Models. Andrew also explained what it takes to build useful models effectively.",
+            link: "https://github.com/Anri-Lombard/Deep-Learning-Specialization",
+        },
+        {
+            id: 7,
+            image_path: "",
+            title: "Boost",
+            topic: "Game Development",
+            description: "An Unity Engine built rocket game built in roughly 4 weeks where a player gets to control a rocket and land it on a platform while dodging obstacles.",
+            link: "https://github.com/Anri-Lombard/Boost",
+        },
+        {
+            id: 8,
+            image_path: "",
+            title: "Machine Learning for Everyone",
+            topic: "Machine Learning",
+            description: "A now outdated course, yet legendary course by Andrew Ng that famously proved Coursera is a valid venture and way to teach. This course was entirely done in Matlab, which gave an intuitive feel for Machine Learning at the time, but is no longer very useful.",
+            link: "https://github.com/Anri-Lombard/machine-learning-for-everyone",
+        },
+        {
+            id: 9,
+            image_path: "",
+            title: "IBM Data Science Specialization",
+            topic: "Machine Learning",
+            description: "These are my notes and models built alongside the IBM Data Science Specialization lectures, where I learned how to tell stories with the data we have, clean it, and build a model that makes accurate predictions. The models included primitive classification models that emphasise visualization of the results.",
+            link: "https://github.com/Anri-Lombard/machine-learning-for-everyone",
+        }
+    ]
     return (
         <div className="min-h-screen flex flex-col mx-10">
             <div className="page-intro">
                 Projects
             </div>
-            <div>
-                Web/App dev
-                <span>Add Coding university</span>
-            </div>
-            <div>
-                ML dev
-            </div>
-            <div>
-                Other + add popups
-            </div>
 
-            <div className="projects">
-                <p>Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.</p>
-                <p>Shoober shooberino adorable doggo many pats, heckin good boys many pats pupper wrinkler, corgo maximum borkdrive. A frighten puggo wow very biscit.</p>
-                <p>Big ol h*ck adorable doggo vvv smol borking doggo with a long snoot for pats big ol, he made many woofs doing me a frighten puggo wow very biscit, ruff fat boi ruff long doggo. </p>
-                <p>Long bois mlem I am bekom fat wrinkler puggo maximum borkdrive big ol pupper I am bekom fat, fluffer vvv adorable doggo lotsa pats snoot. I am bekom fat ur givin me a spook length boy wow very biscit very good spot.</p>
-                <p>Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe shoober what a nice floof, borking doggo.</p>
+            <div className="box-container m-10">
+                {
+                    projects.map(project => (
+                        <button 
+                            key={project.id} 
+                            className="project transition duration-150 ease-out hover:ease-in"
+                        >
+                            <div>{project.title}</div>
+                            <div>{project.topic}</div>
+                            <div>{project.description}</div>
+                        </button>
+                    ))
+                }
             </div>
+            
         </div>
     )
 }
