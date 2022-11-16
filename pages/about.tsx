@@ -18,9 +18,9 @@ function About() {
                 <div className="flex-auto xl:w-full profile-img">
                     <Image src={AnriIMG} alt="Profile Picture" />
                 </div>
-                <div className="flex-auot flex flex-col">
+                <div className="flex-auto flex flex-col">
                     <span className="profile-item-1">
-                        I am a <b>Full Stack Developer</b>, nascent <b>Machine Learning Engineer</b>, and a <b>University Undergraduate Researcher</b>.
+                        I am a <b>Full Stack Developer</b>, nascent <b>Machine Learning Engineer</b>, and an <b>University Undergraduate Researcher</b>.
                     </span>
                     <span className="profile-item-2">
                         In 2022 I turned <b>20 years old</b> and am spending this year studying <b>Computer Science</b>
@@ -31,7 +31,7 @@ function About() {
                         <b>Exercising</b>, and <b>Writing</b>.
                     </span>
                     <span className="profile-item-2">
-                        My least favourite activities are <b>Cooking</b>, <b>Cleaning,</b> <b>Commuting</b> and <b>Drinking Coffee</b>.
+                        My least favourite activities are <b>Cooking</b>, <b>Cleaning</b>, <b>Comparing Computer CPUs</b>, and <b>Commuting</b>.
                     </span>
                 </div>
             </div>
