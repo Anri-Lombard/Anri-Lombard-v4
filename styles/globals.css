@@ -20,6 +20,7 @@ a {
 
 
 @layer components {
+
   /* --- Navbar ---  */
   .navbar {
     padding: 2rem;
@@ -83,7 +84,33 @@ a {
 
   /* Pages */
   .page-intro {
-    @apply self-center text-center p-32 bg-sky-300 w-screen
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg,
+        rgba(59, 173, 227, 1) 0%,
+        rgba(87, 111, 230, 1) 25%,
+        rgba(152, 68, 183, 1) 51%,
+        rgba(255, 53, 127, 1) 100%);
+    animation: AnimateBG 20s ease infinite;
+    font-family: 'Suez One', serif;
+
+    @apply self-center text-center p-32 bg-sky-300 w-screen lg:text-7xl text-white text-5xl
+  }
+
+  @keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%
+    }
+
+    50% {
+      background-position: 100% 50%
+    }
+
+    100% {
+      background-position: 0% 50%
+    }
   }
 
   /* Projects */
@@ -191,11 +218,5 @@ a {
   .projects p:last-child {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-  }
-
-
-  /* --- Contacts ---  */
-  .dissapear {
-    @apply ease-out duration-150 hover:opacity-0
   }
 }

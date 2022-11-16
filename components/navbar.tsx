@@ -12,22 +12,33 @@ import { useRouter } from "next/router";
 
 function Navbar() {
     const router = useRouter();
+    
 
     
     const handleScroll = () => {
         const navbar = document.getElementById("navbar");
         const navbar_holder = document.getElementById("nav-holder")
         if (navbar != null && navbar_holder != null) {
-            if (window.scrollY < 120) {
-                navbar.classList.add("opacity-100")
-                navbar.classList.remove("opacity-40")
-                navbar_holder.classList.remove("scale-75", "z-20")
-             } else if (window.scrollY >= 120) {
-                navbar_holder.classList.add("scale-75", "z-20")
-                navbar.classList.add("opacity-40")
-                navbar.classList.remove("opacity-100")
+            if (window.innerWidth > 768) {
+                navbar_holder.classList.add("sticky");
+                if (window.scrollY < 120) {
+                    navbar.classList.add("opacity-100")
+                    navbar.classList.remove("opacity-40")
+                    navbar_holder.classList.remove("scale-75", "z-20")
+                 } else if (window.scrollY >= 120) {
+                    navbar_holder.classList.add("scale-75", "z-20")
+                    navbar.classList.add("opacity-40")
+                    navbar.classList.remove("opacity-100")
+                }
+
+            } else {
+                navbar_holder.classList.remove("sticky")
             }
+            console.log(window.innerWidth);
+            
         }
+
+        
     };
 
     useEffect(() => {
@@ -37,15 +48,15 @@ function Navbar() {
 
     return (
         <nav id="nav-holder" className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 sticky top-0 left-0 right-0 z-10 ease-in duration-200">
-            <div id="navbar" className="container flex flex-wrap justify-between items-center mx-auto p-7 ease-in duration-300">
-                <div className="cursor-pointer">
+            <div id="navbar" className="container flex flex-col justify-between items-center mx-auto p-7 ease-in duration-300">
+                <div className="cursor-pointer mb-5">
                     <Link href="/">
                         <span className="flex items-center self-center text-xl font-semibold whitespace-nowrap dark:text-white">
                             Anri Lombard
                         </span>
                     </Link>
                 </div>
-                <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+                <div className="w-full md:block md:w-auto" id="navbar-default">
                     <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                         <li className={router.pathname === "/about" ? "navbar-item active" : "navbar-item"}>
                             <Link href="/about">About</Link>
