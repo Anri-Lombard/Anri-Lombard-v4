@@ -72,11 +72,11 @@ function Navbar() {
                                 <FontAwesomeIcon icon={faLinkedin} />
                             </Link>
                         </li>
-                        <li className="cursor-pointer hover:opacity-50">
+                        {/* <li className="cursor-pointer hover:opacity-50">
                             <Link href="https://www.linkedin.com/in/anri-lombard-ab37ab201/">
                                 <FontAwesomeIcon icon={faCircleHalfStroke} />
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>

@@ -109,7 +109,7 @@ function Learning() {
 
 
     return (
-        <div className="min-h-screen flex flex-col mx-10">
+        <div className="min-h-screen flex flex-col mx-10 font-sans">
             <div className="page-intro">
                 Learning
             </div>

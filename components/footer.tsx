@@ -35,14 +35,14 @@ function Footer() {
                                     <FontAwesomeIcon icon={faLinkedin} />
                                 </Link>
                             </span>
-                            <span>
+                            {/* <span>
                                 &#x2022;
                             </span>
                             <span className="cursor-pointer hover:opacity-40">
                                 <Link href="https://www.linkedin.com/in/anri-lombard-ab37ab201/">
                                     <FontAwesomeIcon icon={faCircleHalfStroke} />
                                 </Link>
-                            </span>
+                            </span> */}
                         </div>
                     </div>
                 </div>
