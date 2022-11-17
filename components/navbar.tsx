@@ -73,12 +73,12 @@ function Navbar() {
                         <li className={router.pathname === "/blog" ? "navbar-item active" : "navbar-item"}>
                             <Link href="https://anri-lombard.github.io/">Blog</Link>
                         </li>
-                        <li className="cursor-pointer hover:opacity-50">
+                        <li className="mx-auto p-2 md:p-0 md:mx-0 cursor-pointer hover:opacity-50">
                             <Link href="https://github.com/Anri-Lombard">
                                 <FontAwesomeIcon icon={faGithub} />
                             </Link>
                         </li>
-                        <li className="cursor-pointer hover:opacity-50">
+                        <li className="mx-auto p-2 md:p-0 md:mx-0 cursor-pointer hover:opacity-50">
                             <Link href="https://www.linkedin.com/in/anri-lombard-ab37ab201/">
                                 <FontAwesomeIcon icon={faLinkedin} />
                             </Link>

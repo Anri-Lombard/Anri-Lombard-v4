@@ -14,8 +14,11 @@ function About() {
             <div className="page-intro">
                 About
             </div>
+            <div className="xl:hidden pt-10 flex-auto w-1/2 lg:w-1/3 border-solid border-2 border-white rounded-sm xl:w-full profile-img self-center">
+                <Image src={AnriIMG} alt="Profile Picture" />
+            </div>
             <div className="flex m-10 flex-col xl:flex-row profile">
-                <div className="flex-auto xl:w-full profile-img">
+                <div className="hidden xl:block flex-auto w-72 border-solid border-2 border-white rounded-sm xl:w-full profile-img self-center">
                     <Image src={AnriIMG} alt="Profile Picture" />
                 </div>
                 <div className="flex-auto flex flex-col">

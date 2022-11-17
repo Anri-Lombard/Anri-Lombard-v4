@@ -9,13 +9,13 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Anri Lombard</title>
-        <meta name="description" content="The website of a professional ice skater that just signed up to be Harry's Quidditch coach!" />
+        <meta name="description" content="The website of a professional ice skater that just signed up to be Harry's Quidditch coach! " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <div className="m-10 text-2xl font-extrabold">
-          Welcome to Anri Lombard's website!
+          Welcome to Anri Lombard&apos;s website!
         </div>
         <div className="font-thin text-xl mb-5">
           This dude is real weird, so here is an intellegence briefing conducted by our top dementors:

@@ -71,7 +71,7 @@ a {
   }
 
   .profile-img {
-    @apply z-0
+    @apply z-0 
   }
 
   .profile-item-1 {
