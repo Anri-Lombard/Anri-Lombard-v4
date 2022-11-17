@@ -1,6 +1,6 @@
 # Personal Website of Anri Lombard
 
-This is the source code for my personal website. It is built using [Nextjs](https://nextjs.org), and [TailwindCSS](https://tailwindcss.com), and deployed on [Vercel](https://vercel.com).
+This is the source code for my personal website. It is built using [Nextjs](https://nextjs.org), [TailwindCSS](https://tailwindcss.com), and [Vercel](https://vercel.com).
 
 ## To run locally
 ```bash
