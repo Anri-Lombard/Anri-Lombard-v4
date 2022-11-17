@@ -4,9 +4,17 @@ function Contact() {
             <div className="page-intro">
                 Contact
             </div>
-            <div>
-                Hard-to-reach kinda dude... but try lmbanr001@myuct.ac.za if you feel adventurous, or visit your local librarian and ask for the weird white kid that shows up on Sundays.
+            <div className="contact">
+                I'm probabaly studying or reading most of the time, but if you feel adventurous, you can try to contact me at:
+                <div className="font-bold text-lg">
+                    <a href="mailto:LMBANR001@myuct.ac.za">LMBANR001@myuct.ac.za</a>
+                </div>
+                OR
+                <div className="font-bold text-lg">
+                <a href="mailto:anri.m.lombard@gmail.com">anri.m.lombard@gmail.com</a>
+                </div>
             </div>
+            
         </div>
     )
 }
