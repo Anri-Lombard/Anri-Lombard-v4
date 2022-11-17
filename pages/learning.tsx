@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 
 function Learning() {
     const learning = {
@@ -109,49 +110,55 @@ function Learning() {
 
 
     return (
-        <div className="min-h-screen flex flex-col mx-10 font-sans">
-            <div className="page-intro">
-                Learning
-            </div>
-            <h3 className="heading">University</h3>
-            <h4 className="heading_2">My main studies are done at University of Cape Town with suplements online</h4>
-            <div className="box-container">
-                {
-                    learning['university'].map(course => (
-                        <button 
-                            key={course.name} 
-                            id={course.name} 
-                            className="box transition duration-150 ease-out hover:ease-in"
-                            onClick={() => flip(course)}
-                        >
-                            <div>{course.rating}</div>
-                            <div>{course.name}</div>
-                        </button>
-                    ))
-                }
-            </div>
+        <>
+            <Head>
+                <title>Anri Lombard - Learning</title>
+                <meta name="description" content="Learned information and subject interrests" />
+            </Head>
+            <div className="min-h-screen flex flex-col mx-10 font-sans">
+                <div className="page-intro">
+                    Learning
+                </div>
+                <h3 className="heading">University</h3>
+                <h4 className="heading_2">My main studies are done at University of Cape Town with suplements online</h4>
+                <div className="box-container">
+                    {
+                        learning['university'].map(course => (
+                            <button 
+                                key={course.name} 
+                                id={course.name} 
+                                className="box transition duration-150 ease-out hover:ease-in"
+                                onClick={() => flip(course)}
+                            >
+                                <div>{course.rating}</div>
+                                <div>{course.name}</div>
+                            </button>
+                        ))
+                    }
+                </div>
 
-            <h3 className="heading">Outside University</h3>
-            <h4 className="heading_2">I tend to believe education goes far beyond the classroom, and this is my attempt to validate that hypothesis</h4>
-            <div className="box-container">
-                {
-                    learning['outside'].map(course => (
-                        <button 
-                            key={course.name} 
-                            id={course.name} 
-                            className="box transition duration-150 ease-out hover:ease-in"
-                            onClick={() => flip(course)}
-                        >
-                            <div>{course.rating}</div>
-                            <div>{course.name}</div>
-                            <div>
-                                <a href={course.link} target="_blank" rel="noreferrer">Certificate Here</a>
-                            </div>
-                        </button>
-                    ))
-                }
+                <h3 className="heading">Outside University</h3>
+                <h4 className="heading_2">I tend to believe education goes far beyond the classroom, and this is my attempt to validate that hypothesis</h4>
+                <div className="box-container">
+                    {
+                        learning['outside'].map(course => (
+                            <button 
+                                key={course.name} 
+                                id={course.name} 
+                                className="box transition duration-150 ease-out hover:ease-in"
+                                onClick={() => flip(course)}
+                            >
+                                <div>{course.rating}</div>
+                                <div>{course.name}</div>
+                                <div>
+                                    <a href={course.link} target="_blank" rel="noreferrer">Certificate Here</a>
+                                </div>
+                            </button>
+                        ))
+                    }
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 

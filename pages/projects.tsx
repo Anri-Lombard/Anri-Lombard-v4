@@ -9,6 +9,8 @@ import RocketImage from '../public/images/Rocket.png';
 import MLForEveryoneImage from '../public/images/MLForEveryone.jpeg';
 import IBMDataScienceImage from '../public/images/IBMDataScience.jpeg';
 
+import Head from 'next/head';
+
 function Projects() {
     const projects = [
         {
@@ -85,39 +87,46 @@ function Projects() {
         }
     ]
     return (
-        <div className="min-h-screen flex flex-col mx-10">
-            <div className="page-intro">
-                Projects
-            </div>
+        <>
+            <Head>
+                <title>Anri Lombard - Projects</title>
+                <meta name="description" content="Built projects and open source contributions" />
+            </Head>
+            <div className="min-h-screen flex flex-col mx-10">
+                <div className="page-intro">
+                    Projects
+                </div>
 
 
-            <div className="box-container md:m-10">
-                {
-                    projects.map(project => (
-                        <button
-                            key={project.id}
-                            className="project transition duration-150 ease-out hover:ease-in"
-                        >
-                            <div className="flex md:flex-row flex-col">
-                                
-                                <div className="flex-col md:drop-shadow-xl drop-shadow-sm">
-                                    <Image src={project.image} alt="Picture of {project.title}" className='rounded-sm'/>
-                                </div>
-                                <div className="flex-col md:ml-10">
-                                    <div className="flex-auto flex-grow text-xl font-extrabold hover:text-white transition duration-250 ease-out">
-                                        <a href={project.link} target="_blank" rel="noreferrer">{project.title}</a>
+                <div className="box-container md:m-10">
+                    {
+                        projects.map(project => (
+                            <button
+                                key={project.id}
+                                className="project transition duration-150 ease-out hover:ease-in"
+                            >
+                                <div className="flex md:flex-row flex-col">
+                                    
+                                    <div className="flex-col md:drop-shadow-xl drop-shadow-sm">
+                                        <Image src={project.image} alt="Picture of {project.title}" className='rounded-sm'/>
                                     </div>
-                                    <div className="flex-auto text-sm font-thin">{project.topic}</div>
-                                    <div className="pt-5">{project.description}</div>
+                                    <div className="flex-col md:ml-10">
+                                        <div className="flex-auto flex-grow text-xl font-extrabold hover:text-white transition duration-250 ease-out">
+                                            <a href={project.link} target="_blank" rel="noreferrer">{project.title}</a>
+                                        </div>
+                                        <div className="flex-auto text-sm font-thin">{project.topic}</div>
+                                        <div className="pt-5">{project.description}</div>
+                                    </div>
+
                                 </div>
+                            </button>
+                        ))
+                    }
+                </div>
 
-                            </div>
-                        </button>
-                    ))
-                }
             </div>
-
-        </div>
+        </>
+        
     )
 }
 
