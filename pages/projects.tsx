@@ -34,15 +34,15 @@ function Projects() {
             image: MakemoreImage,
             title: "Makemore",
             topic: "Machine Learning",
-            description: "An autoregressive character-level language model for making more things built initially by Andrej Karpathy. In this project we went from using a basic bag-of-words model to completely deriving backward propogation from scratch using in-depth calculus and statistics. This project is ongoing, and we expect to build the model with a transformer once we near the end.",
+            description: "An autoregressive character-level language model for making more things built initially by Andrej Karpathy. In this project, we went from using a basic bag-of-words model to completely deriving backward propagation from scratch using in-depth calculus and statistics. This project is ongoing, and we expect to build the model with a transformer once we near the end.",
             link: "https://github.com/karpathy/makemore",
         },
         {
             id: 4,
             image: GANSImage,
-            title: "Various Generative Adverserial Network (GAN) Models",
+            title: "Various Generative Adversarial Network (GAN) Models",
             topic: "Machine Learning",
-            description: "As part of a specialization on Adverserial Networks, we got to build 3-4 assignment projects for each of the 3 courses in the specialization. They ranged from simple digit classification to generating images, poetry, and music.",
+            description: "As part of a specialization on Adversarial Networks, we got to build 3-4 assignment projects for each of the 3 courses in the specialization. They ranged from simple digit classification to generating images, poetry, and music.",
             link: "https://github.com/karpathy/makemore",
         },
         {
@@ -50,7 +50,7 @@ function Projects() {
             image: DefeasibleReasoningToolImage,
             title: "Defeasible Reasoning Tool",
             topic: "Knowledge Representation Research",
-            description: "As part of an academically challenging research course in university, I built a \"Knowledge Representation Tool to Assist in Rational Closure Diagnosis\" which included the website and a GUI, which both allowed Novice researchers easier access to Rational Closure information and Experts to a GUI that allowed them to easilty get conclusions from a given defeasible query.",
+            description: "As part of an academically challenging research course in university, I built a \"Knowledge Representation Tool to Assist in Rational Closure Diagnosis\" which included the website and a GUI, which both allowed Novice researchers easier access to Rational Closure information and Experts to a GUI that allowed them to easily get conclusions from a given defeasible query.",
             link: "https://defeasible-reasoning.vercel.app/",
         },
         {
@@ -66,7 +66,7 @@ function Projects() {
             image: RocketImage,
             title: "Boost",
             topic: "Game Development",
-            description: "An Unity Engine built rocket game built in roughly 4 weeks where a player gets to control a rocket and land it on a platform while dodging obstacles.",
+            description: "A Unity-Engine-built rocket game built in roughly 4 weeks where a player gets to control a rocket and land it on a platform while dodging obstacles.",
             link: "https://github.com/Anri-Lombard/Boost",
         },
         {
@@ -82,7 +82,7 @@ function Projects() {
             image: IBMDataScienceImage,
             title: "IBM Data Science Specialization",
             topic: "Machine Learning",
-            description: "These are my notes and models built alongside the IBM Data Science Specialization lectures, where I learned how to tell stories with the data we have, clean it, and build a model that makes accurate predictions. The models included primitive classification models that emphasise visualization of the results.",
+            description: "These are my notes and models built alongside the IBM Data Science Specialization lectures, where I learned how to tell stories with the data we have, clean it, and build a model that makes accurate predictions. The models included primitive classification models that emphasize visualization of the results.",
             link: "https://github.com/Anri-Lombard/machine-learning-for-everyone",
         }
     ]

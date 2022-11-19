@@ -32,12 +32,10 @@ function About() {
                             I am a <b>Full Stack Developer</b>, nascent <b>Machine Learning Engineer</b>, and an <b>University Undergraduate Researcher</b>.
                         </span>
                         <span className="profile-item-2">
-                            In 2022 I turned <b>20 years old</b> and am spending this year studying <b>Computer Science</b>
-                            &nbsp;and <b>Mathematical Statistics</b> in university.
+                            In 2023 I&apos;ll turn <b>21 years old</b> and will spend the year studying <b>Computer Science</b> and <b>Mathematical Statistics</b> in university, amongst other things.
                         </span>
                         <span className="profile-item-1">
-                            My favourite activities are <b>Studying</b>, <b>Programming</b>, <b>Reading</b>,&nbsp;
-                            <b>Exercising</b>, and <b>Writing</b>.
+                            My favourite activities are <b>Studying</b>, <b>Programming</b>, <b>Reading</b>, <b>Exercising</b>, and <b>Writing</b>.
                         </span>
                         <span className="profile-item-2">
                             My least favourite activities are <b>Cooking</b>, <b>Cleaning</b>, <b>Comparing Computer CPUs</b>, and <b>Commuting</b>.
