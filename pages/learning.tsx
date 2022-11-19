@@ -77,6 +77,24 @@ function Learning() {
                 rating: "⭐️⭐️⭐️⭐️⭐️",
                 description: "Generative adversarial networks provide an extra perspective on how state-of-the-art neural networks are built",
                 link: "https://www.coursera.org/account/accomplishments/specialization/PT2AYCUE3XDY"
+            },
+            {
+                name: "IBM Data Science",
+                rating: "⭐️⭐️⭐️⭐️",
+                description: "This course was a great overview of Data Science, and I learned about SQL, Python for AI and data analysis, Data Science Methodology, and Machine Learning, all while building a capstone project",
+                link: "https://www.coursera.org/account/accomplishments/specialization/PT2AYCUE3XDY"
+            },
+            {
+                name: "Entrepreneurship by Wharton",
+                rating: "⭐️⭐️⭐️⭐️",
+                description: "As a more technical-minded person, the business side is not my forte. This course taught me about how to (1) develop opportunities, (2) launch a startup, (3) growth strategies, and (4) finance and profitability. Of course, real experience would be an even better teacher",
+                link: "https://www.coursera.org/account/accomplishments/specialization/PT2AYCUE3XDY"
+            },
+            {
+                name: "IBM Applied Data Science",
+                rating: "⭐️⭐️⭐️⭐️⭐️",
+                description: "Learned the practical side to match the theory by building a python capstone project and analyzing the data as part of a 5-course specialization",
+                link: "https://www.coursera.org/account/accomplishments/specialization/PT2AYCUE3XDY"
             }
         ]
     }
