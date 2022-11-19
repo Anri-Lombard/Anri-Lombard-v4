@@ -4,11 +4,6 @@ import Head from 'next/head';
 
 
 function About() {
-    const codeText = `
-        class Anri() {
-            Age
-        }
-    `;
 
     return (
         <>

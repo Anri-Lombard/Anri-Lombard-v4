@@ -18,7 +18,7 @@ const Home: NextPage = () => {
           Welcome to Anri Lombard&apos;s website!
         </div>
         <div className="font-thin text-xl mb-5">
-          This dude is real weird, so here is an intellegence briefing conducted by our top dementors:
+          This dude is really weird, so here is an intelligence briefing conducted by our top dementors:
         </div>
         <div className="font-normal text-lg font-sans hover:font-semibold hover:text-xl transition duration-250 ease-in-out">
           <Link href="/about">about himself</Link>
@@ -30,10 +30,10 @@ const Home: NextPage = () => {
           <Link href="/projects">about traces of software he uses to spy on Hermione</Link>
         </div>
         <div className="font-normal text-lg font-sans hover:font-semibold hover:text-xl  transition duration-250 ease-in-out">
-          <Link href="/contact">about contacts we found with rare occurences of actually provoking response</Link>
+          <Link href="/contact">about contacts we found with rare occurrences of actually provoking response</Link>
         </div>
         <div className="font-normal text-lg font-sans hover:font-semibold hover:text-xl  transition duration-250 ease-in-out">
-          <Link href="https://anri-lombard.github.io/">about his attempt to suade armies of followers with his words</Link>
+          <Link href="https://anri-lombard.github.io/">about his attempt to persuade armies of followers with his words</Link>
         </div>
       </main>
     </div>

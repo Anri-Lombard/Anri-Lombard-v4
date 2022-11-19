@@ -7,7 +7,7 @@ function Learning() {
             {
                 name: "MAM1000W",
                 rating: "⭐️⭐️⭐️⭐️",
-                description: "The only drawback this course had was it&apos;s occurrence during Covid, so I couldn&apos;t interact with lecturers to grasp the content well, but the math recap from high school was fantastic!",
+                description: "The only drawback this course had was its occurrence during Covid, so I couldn't interact with lecturers to grasp the content well, but the math recap from high school was fantastic!",
             },
             {
                 name: "MAM2000W",
@@ -52,7 +52,7 @@ function Learning() {
             {
                 name: "STA2004F",
                 rating: "⭐️⭐️⭐️⭐️⭐️",
-                description: "This course is known as the most difficult in all of UCT science, or at least advertised as such by tutors. The course covered fundamental derivation of Likelihoods, distributions, and construction of confidence intervals (etc), but the lasting impression of passing this course well goes beyond it&apos;s content",
+                description: "This course is known as the most difficult in all of UCT science, or at least advertised as such by tutors. The course covered fundamental derivation of Likelihoods, distributions, and construction of confidence intervals (etc), but the lasting impression of passing this course well goes beyond its content",
             },
             {
                 name: "STA2005S",
@@ -69,12 +69,14 @@ function Learning() {
             {
                 name: "Deep learning Specialization",
                 rating: "⭐️⭐️⭐️⭐️⭐️",
-                description: "It is no exaggeration that this is the single most intriguing course I've ever done. It introduced gradient descent, forward and backward propagation, and what to focus on when building deep learning models, amongst many other topics. The lecturer, Andrew Ng, has been an inspirational figure to me ever since"
+                description: "It is no exaggeration that this is the single most intriguing course I've ever done. It introduced gradient descent, forward and backward propogation, and what to focus on when building deep learning models, amongst many other topics. The lecturer, Andrew Ng, has been an inspirational figure to me ever since",
+                link: "https://www.coursera.org/account/accomplishments/specialization/N3RKPLZN6H2S"
             },
             {
                 name: "GANS Specialization",
                 rating: "⭐️⭐️⭐️⭐️⭐️",
-                description: "Generative adversarial networks provide an extra perspective on how state-of-the-art neural networks are built"
+                description: "Generative adversarial networks provide an extra perspective on how state-of-the-art neural networks are built",
+                link: "https://www.coursera.org/account/accomplishments/specialization/PT2AYCUE3XDY"
             }
         ]
     }
