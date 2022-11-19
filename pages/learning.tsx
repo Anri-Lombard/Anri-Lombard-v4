@@ -67,16 +67,14 @@ function Learning() {
         ],
         "outside": [
             {
-                name: "Deeplearning Specialization",
+                name: "Deep learning Specialization",
                 rating: "⭐️⭐️⭐️⭐️⭐️",
-                description: "It is no exaggeration that this is the single most intriguing course I've ever done. It introduced gradient descent, forward and backward propagation, and what to focus on when building deep learning models, amongst many other topics. The lecturer, Andrew Ng, has been an inspirational figure to me ever since",
-                link: "https://www.coursera.org/account/accomplishments/specialization/N3RKPLZN6H2S"
+                description: "It is no exaggeration that this is the single most intriguing course I've ever done. It introduced gradient descent, forward and backward propagation, and what to focus on when building deep learning models, amongst many other topics. The lecturer, Andrew Ng, has been an inspirational figure to me ever since"
             },
             {
                 name: "GANS Specialization",
                 rating: "⭐️⭐️⭐️⭐️⭐️",
-                description: "Generative adversarial networks provide an extra perspective on how state-of-the-art neural networks are built",
-                link: "https://www.coursera.org/account/accomplishments/specialization/PT2AYCUE3XDY"
+                description: "Generative adversarial networks provide an extra perspective on how state-of-the-art neural networks are built"
             }
         ]
     }
@@ -87,7 +85,7 @@ function Learning() {
         rating: number
     }
 
-    const flip = (course: { name: string; rating: string; description: string; link?: string } | { name: string; rating: number; description: string; link?: string }) => {
+    const flip = (course: { name: string; rating: string; description: string } | { name: string; rating: number; description: string }) => {
         const element = document.getElementById(course.name);
         
         if (element == null) {
@@ -102,7 +100,7 @@ function Learning() {
 
         // Toggle course name and description on click
         if (element.innerHTML === course.description) {
-            course.link != null && course.link != undefined ? element.innerHTML = "<pre>" + course.rating + "\n" + course.name + "\n" + "<a href=" + course.link + " target=\"_blank\" rel=\"noreferrer\">Certificate Here</a></pre>" : element.innerHTML = "<pre>" + course.rating + "\n" + course.name + "</pre>"
+            element.innerHTML = "<pre>" + course.rating + "\n" + course.name + "</pre>"
         } else
             element.innerHTML = course.description
         
@@ -150,9 +148,6 @@ function Learning() {
                             >
                                 <div>{course.rating}</div>
                                 <div>{course.name}</div>
-                                <div>
-                                    <a href={course.link} target="_blank" rel="noreferrer">Certificate Here</a>
-                                </div>
                             </button>
                         ))
                     }
