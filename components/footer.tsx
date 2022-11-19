@@ -14,7 +14,7 @@ function Footer() {
             <div className="p-10 flex flex-col">
                 <span className="flex-1 self-center">
 
-                &copy; 2022 Anri Lombard
+                    &copy; 2022 Anri Lombard
                 </span>
             </div>
         </nav>

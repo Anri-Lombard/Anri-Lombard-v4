@@ -7,37 +7,37 @@ function Learning() {
             {
                 name: "MAM1000W",
                 rating: "⭐️⭐️⭐️⭐️",
-                description: "The only drawback this course had was it's occurence during Covid, so I couldn't interact with lecturers to grasp the content well, but the math recap from high school was fantastic!",
+                description: "The only drawback this course had was it&apos;s occurrence during Covid, so I couldn&apos;t interact with lecturers to grasp the content well, but the math recap from high school was fantastic!",
             },
             {
                 name: "MAM2000W",
                 rating: "⭐️⭐️⭐️⭐️⭐️",
-                description: "This course was made up of 4 modules: (1) Linear Algebra, (2) Advanced Calculus, (3) Real Analysis, and (4) Defferential Equations; It pushed my friends and I enough to leave lasting memories of joking pretence that we might fail (obviously some of us got 90%+... cough cough)",
+                description: "This course was made up of 4 modules: (1) Linear Algebra, (2) Advanced Calculus, (3) Real Analysis, and (4) Differential Equations; It pushed my friends and me enough to leave lasting memories of joking pretense that we might fail (obviously some of us got 90%+... cough cough)",
             },
             {
                 name: "MAM1019H",
                 rating: "⭐️⭐️",
-                description: "Besides a very interresting and helpful tutor, this course did not do the mathematics justice. The self study led me down a rabit hole of desciphering proofs, which was useful, I guess...",
+                description: "Besides a very interesting and helpful tutor, this course did not do the mathematics justice. The self-study led me down a rabbit hole of deciphering proofs, which was useful, I guess...",
             },
             {
                 name: "MAM1008S",
                 rating: "⭐️⭐️⭐️⭐️",
-                description: "Some introductory Linear Algebra was taught, which gave a new dimension to my hing-school-math brain. Overall it was a small and easily-digestible course",
+                description: "Some introductory Linear Algebra was taught, which gave a new dimension to my high-school-math brain. Overall it was a small and easily-digestible course",
             },
             {
                 name: "CSC1015F",
                 rating: "⭐️⭐️⭐️",
-                description: "This was an introductory course using Python. The content was targetted at beginners, so frustrated me. The most difficult section was Recursion, which proved to be the most exciting part of the course",
+                description: "This was an introductory course using Python. The content was targeted at beginners, so frustrated me. The most difficult section was Recursion, which proved to be the most exciting part of the course",
             },
             {
                 name: "CSC1016S",
                 rating: "⭐️⭐️⭐️⭐️",
-                description: "This introductory Data Structures in Java course included learning about types of tree structures, linked lists, heaps, and other fundamental structures. I already did most of the content on MIT Opencourseware, but UCT allowed some hands-on experience",
+                description: "This introductory Data Structures in Java course included learning about types of tree structures, linked lists, heaps, and other fundamental structures. I already did most of the content on MIT OpenCourseWare, but UCT allowed some hands-on experience",
             },
             {
                 name: "STA1006S",
                 rating: "⭐️⭐️⭐️⭐️⭐️",
-                description: "This introductory statistics course was by far the most difficult course for me, since I've never done stats in school. It was filled with nascent ideas and important distributions in statistics that captivate me to this day - because of the difficulty of this course I was determined to major in statistics",
+                description: "This introductory statistics course was by far the most difficult course for me since I've never done stats in school. It was filled with nascent ideas and important distributions in statistics that captivate me to this day - because of the difficulty of this course I was determined to major in statistics",
             },
             {
                 name: "CSC2001F",
@@ -52,7 +52,7 @@ function Learning() {
             {
                 name: "STA2004F",
                 rating: "⭐️⭐️⭐️⭐️⭐️",
-                description: "This course is known as the most difficult in all of UCT science, or at least advertised as such by tutors. The course coverred fundamental derivation of Likelihoods, distributions, and construction of confidence intervals (etc), but the lasting impression of passing this course well goes beyond it's content",
+                description: "This course is known as the most difficult in all of UCT science, or at least advertised as such by tutors. The course covered fundamental derivation of Likelihoods, distributions, and construction of confidence intervals (etc), but the lasting impression of passing this course well goes beyond it&apos;s content",
             },
             {
                 name: "STA2005S",
@@ -62,20 +62,20 @@ function Learning() {
             {
                 name: "CSC2005Z",
                 rating: "⭐️⭐️⭐️⭐️",
-                description: "A computer science research course for academically-inclined students. The research content was mildy interresting (Knowledge Representation), but more enjoyable was that I got to program a website and GUI, learn how to present my findings in a report and present it to scientists. It was mostly self-study, which I liked most",
+                description: "A computer science research course for academically-inclined students. The research content was mildly interesting (Knowledge Representation), but more enjoyable was that I got to program a website and GUI, learn how to present my findings in a report and present it to scientists. It was mostly self-study, which I liked most",
             }
         ],
         "outside": [
             {
                 name: "Deeplearning Specialization",
                 rating: "⭐️⭐️⭐️⭐️⭐️",
-                description: "It is no exhageration that this is the single most intriguing course I've ever done. It introduced gradient descent, forward and backward propogation, and what to focus on when building deeplearning models, amongst many other topics. The lecturer, Andrew Ng, has been an inspirational figure to me ever since",
+                description: "It is no exaggeration that this is the single most intriguing course I've ever done. It introduced gradient descent, forward and backward propagation, and what to focus on when building deep learning models, amongst many other topics. The lecturer, Andrew Ng, has been an inspirational figure to me ever since",
                 link: "https://www.coursera.org/account/accomplishments/specialization/N3RKPLZN6H2S"
             },
             {
                 name: "GANS Specialization",
                 rating: "⭐️⭐️⭐️⭐️⭐️",
-                description: "Generative adverserial networks provide an extra perspective on how state-of-the art neural networks are build",
+                description: "Generative adversarial networks provide an extra perspective on how state-of-the-art neural networks are built",
                 link: "https://www.coursera.org/account/accomplishments/specialization/PT2AYCUE3XDY"
             }
         ]
@@ -113,14 +113,14 @@ function Learning() {
         <>
             <Head>
                 <title>Anri Lombard - Learning</title>
-                <meta name="description" content="Learned information and subject interrests" />
+                <meta name="description" content="Learned information and subject interest" />
             </Head>
             <div className="min-h-screen flex flex-col mx-10 font-sans">
                 <div className="page-intro">
                     Learning
                 </div>
                 <h3 className="heading">University</h3>
-                <h4 className="heading_2">My main studies are done at University of Cape Town with suplements online</h4>
+                <h4 className="heading_2">My main studies are done at the University of Cape Town with supplements online</h4>
                 <div className="box-container">
                     {
                         learning['university'].map(course => (
