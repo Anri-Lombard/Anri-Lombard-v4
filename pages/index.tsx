@@ -21,19 +21,19 @@ const Home: NextPage = () => {
           This dude is really weird, so here is an intelligence briefing conducted by our top dementors:
         </div>
         <div className="font-normal text-lg font-sans hover:font-semibold hover:text-xl transition duration-250 ease-in-out">
-          <Link href="/about">about himself</Link>
+          <Link href="/about">👉 about himself</Link>
         </div>
         <div className="font-normal text-lg font-sans hover:font-semibold hover:text-xl  transition duration-250 ease-in-out">
-          <Link href="/learning">about his suspicious subject interrests</Link>
+          <Link href="/learning">👉 about his suspicious subject interrests</Link>
         </div>
         <div className="font-normal text-lg font-sans hover:font-semibold hover:text-xl  transition duration-250 ease-in-out">
-          <Link href="/projects">about traces of software he uses to spy on Hermione</Link>
+          <Link href="/projects">👉 about traces of software he uses to spy on Hermione</Link>
         </div>
         <div className="font-normal text-lg font-sans hover:font-semibold hover:text-xl  transition duration-250 ease-in-out">
-          <Link href="/contact">about contacts we found with rare occurrences of actually provoking response</Link>
+          <Link href="/contact">👉 about contacts we found with rare occurrences of actually provoking response</Link>
         </div>
         <div className="font-normal text-lg font-sans hover:font-semibold hover:text-xl  transition duration-250 ease-in-out">
-          <Link href="https://anri-lombard.github.io/">about his attempt to persuade armies of followers with his words</Link>
+          <Link href="https://anri-lombard.github.io/">👉 about his attempt to persuade armies of followers with his words</Link>
         </div>
       </main>
     </div>
