@@ -99,6 +99,7 @@ function Projects() {
 
 
                 <div className="box-container md:m-10">
+                    <h4 className="heading_2">I am mostly interested in machine learning, although web and game development are fun hobbies I will sometimes delve into</h4>
                     {
                         projects.map(project => (
                             <button
