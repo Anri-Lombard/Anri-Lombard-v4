@@ -155,7 +155,7 @@ a {
     @apply bg-sky-300 border-solid border-2 border-sky-800 rounded drop-shadow-sm p-5 w-full my-3 text-left
   }
 
-  li {
+  .project li {
     @apply list-disc font-extrabold
   }
 
