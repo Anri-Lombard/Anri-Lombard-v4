@@ -57,7 +57,7 @@ function Navbar() {
                     </Link>
                 </div>
                 <div className="w-full md:block md:w-auto" id="navbar-default">
-                    <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                    <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium text-center">
                         <li className={router.pathname === "/about" ? "navbar-item active" : "navbar-item"}>
                             <Link href="/about">About</Link>
                         </li>
