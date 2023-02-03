@@ -151,7 +151,11 @@ a {
 
   /* Projects */
 
-  .project li {
+  .project {
+    @apply bg-sky-300 border-solid border-2 border-sky-800 rounded drop-shadow-sm p-5 w-full my-3 text-left
+  }
+
+  li {
     @apply list-disc font-extrabold
   }
 
@@ -159,8 +163,6 @@ a {
     min-width: 300px;
     max-width: 500px;
     margin: auto;
-
-    @apply bg-sky-300 border-solid border-2 border-sky-800 rounded drop-shadow-sm p-5 w-full my-3 text-left
   }
 
   .projects p {
