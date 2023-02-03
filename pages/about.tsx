@@ -10,13 +10,11 @@ function About() {
         getRandomColor()
     );
 
-    const [borderColor, setBorderColor] = useState(getRandomColor());
-
     function getRandomColor() {
         const colors = ['#1abc9c', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c'];
         const randomIndex = Math.floor(Math.random() * colors.length);
         return colors[randomIndex];
-      }
+    }
 
     return (
         <>
