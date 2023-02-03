@@ -38,7 +38,7 @@ function About() {
                     <div className="hidden xl:block w-1/3 self-center border-solid border-2 border-white rounded-sm">
                         <Image src={AnriIMG} alt="Profile Picture" />
                     </div>
-                    <div className="w-2/3 flex flex-col">
+                    <div className="xl:w-2/3 flex flex-col">
                         <span className="profile-item-1">
                             👈 <strong>That&apos;s me</strong>. Now, I know what you&apos;re thinking: How did it end up like this...
                         </span>

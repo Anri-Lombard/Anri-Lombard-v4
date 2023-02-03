@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <div className="m-10 text-2xl font-extrabold">
+        <div className="m-10 text-2xl font-extrabold text-center">
           Welcome to Anri Lombard&apos;s website!
         </div>
         <div className="font-thin text-xl mb-5 text-center max-w-7xl">

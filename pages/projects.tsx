@@ -192,7 +192,7 @@ function Projects() {
                 </div>
 
 
-                <div className="box-container md:m-10">
+                <div className="box-container md:m-10 mt-10">
                     <h4 className="heading_2">I am mostly interested in machine learning, although web and game development are fun hobbies I will sometimes delve into</h4>
                     {
                         projects.map((project, index) => (
@@ -204,12 +204,12 @@ function Projects() {
                                 <a href={project.link} target="_blank" rel="noreferrer">
                                     <div className="flex md:flex-row flex-col">
 
-                                        <div className="flex w-1/3 justify-center items-center">
+                                        <div className="flex md:w-1/3 justify-center items-center">
                                             <Image src={project.image} alt="Picture of {project.title}" className='rounded-sm' />
                                         </div>
 
 
-                                        <div className="flex-2 w-2/3 md:ml-10">
+                                        <div className="flex-2 p-5 md:w-2/3 md:ml-10">
                                             <div className="flex-auto flex-grow text-xl font-extrabold hover:text-white transition duration-250 ease-out">
                                                 {project.title}
                                             </div>
