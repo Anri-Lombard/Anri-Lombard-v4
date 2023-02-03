@@ -124,6 +124,10 @@ a {
     @apply bg-sky-300 border-solid border-2 border-sky-800 rounded drop-shadow-sm p-5 w-full my-3 text-left
   }
 
+  li {
+    @apply list-disc font-extrabold
+  }
+
   /* Contact */
   .contact {
     @apply bg-sky-300 border-solid border-2 border-sky-800 rounded drop-shadow-sm p-5 min-w-min text-center self-center m-10

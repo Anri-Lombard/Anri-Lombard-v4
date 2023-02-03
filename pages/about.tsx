@@ -35,7 +35,7 @@ function About() {
                     <Image src={AnriIMG} alt="Profile Picture" />
                 </div>
                 <div className="flex m-10 profile">
-                    <div className="hidden xl:block w-1/3 self-center border-solid border-2 border-white rounded-sm" style={{ backgroundColor: backgroundColor }}>
+                    <div className="hidden xl:block w-1/3 self-center border-solid border-2 border-white rounded-sm">
                         <Image src={AnriIMG} alt="Profile Picture" />
                     </div>
                     <div className="w-2/3 flex flex-col">
