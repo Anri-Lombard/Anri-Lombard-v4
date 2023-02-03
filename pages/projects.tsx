@@ -176,7 +176,7 @@ function Projects() {
                 bgColors.push(getRandomColor());
             })
             setBackgroundColors(bgColors);
-        }, 2000);
+        }, 3000);
         return () => clearInterval(interval);
     });
 
@@ -198,7 +198,7 @@ function Projects() {
                         projects.map((project, index) => (
                             <button
                                 key={index}
-                                className="project transition duration-150 ease-out hover:ease-in"
+                                className="project"
                                 style={{ backgroundColor: backgroundColors[index] }}
                             >
                                 <a href={project.link} target="_blank" rel="noreferrer">

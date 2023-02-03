@@ -142,7 +142,7 @@ function Learning() {
                 bgColors.push(getRandomColor());
             })
             setBackgroundColors(bgColors);
-        }, 2000);
+        }, 3000);
         return () => clearInterval(interval);
     });
 
@@ -164,7 +164,7 @@ function Learning() {
                             <button
                                 key={index}
                                 id={course.name}
-                                className="box transition duration-150 ease-out hover:ease-in"
+                                className="box"
                                 onClick={() => flip(course)}
                                 style={{ backgroundColor: backgroundColors[index]}}
                             >

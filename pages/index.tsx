@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <div className="m-10 text-2xl font-extrabold">
           Welcome to Anri Lombard&apos;s website!
         </div>
-        <div className="font-thin text-xl mb-5">
+        <div className="font-thin text-xl mb-5 text-center max-w-7xl">
           The home of a professional ice skater and now Quidditch coach extraordinaire. 
           Ready to embark on an adventure filled with twists and turns? Then join us as we 
           delve into his life. 
