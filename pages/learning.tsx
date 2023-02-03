@@ -1,7 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
 function Learning() {
+
+    const [backgroundColors, setBackgroundColors] = useState([]);
+
+    function getRandomColor() {
+        const colors = ['#1abc9c', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c'];
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        return colors[randomIndex];
+    }
+
     const learning = {
         "university": [
             {
@@ -98,7 +107,7 @@ function Learning() {
             }
         ]
     }
-    
+
     interface ILearning {
         name: string,
         description: string,
@@ -107,7 +116,7 @@ function Learning() {
 
     const flip = (course: { name: string; rating: string; description: string } | { name: string; rating: number; description: string }) => {
         const element = document.getElementById(course.name);
-        
+
         if (element == null) {
             return
         }
@@ -123,9 +132,18 @@ function Learning() {
             element.innerHTML = "<pre>" + course.rating + "\n" + course.name + "</pre>"
         } else
             element.innerHTML = course.description
-        
+
     }
 
+    useEffect(() => {
+        const bgColors = [];
+        learning.university.forEach(() => {
+            bgColors.push(getRandomColor());
+        })
+        setTimeout(() => {
+            setBackgroundColors(bgColors);
+        }, 3000)
+    }, [learning.university])
 
     return (
         <>
@@ -141,12 +159,13 @@ function Learning() {
                 <h4 className="heading_2">My main studies are done at the University of Cape Town with supplements online (Hint: tap the squares!)</h4>
                 <div className="box-container">
                     {
-                        learning['university'].map(course => (
-                            <button 
-                                key={course.name} 
-                                id={course.name} 
+                        learning['university'].map((course, index) => (
+                            <button
+                                key={index}
+                                id={course.name}
                                 className="box transition duration-150 ease-out hover:ease-in"
                                 onClick={() => flip(course)}
+                                style={{ backgroundColor: backgroundColors[index]}}
                             >
                                 <div>{course.rating}</div>
                                 <div>{course.name}</div>
@@ -159,12 +178,13 @@ function Learning() {
                 <h4 className="heading_2">I tend to believe education goes far beyond the classroom, and this is my attempt to validate that hypothesis</h4>
                 <div className="box-container">
                     {
-                        learning['outside'].map(course => (
-                            <button 
-                                key={course.name} 
-                                id={course.name} 
+                        learning['outside'].map((course, index) => (
+                            <button
+                                key={index}
+                                id={course.name}
                                 className="box transition duration-150 ease-out hover:ease-in"
                                 onClick={() => flip(course)}
+                                style={{ backgroundColor: backgroundColors[index]}}
                             >
                                 <div>{course.rating}</div>
                                 <div>{course.name}</div>

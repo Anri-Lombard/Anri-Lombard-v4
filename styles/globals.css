@@ -7,6 +7,8 @@ body {
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -67,15 +69,15 @@ a {
 
   /* Profile */
   .profile {
-    @apply bg-sky-100 border-solid border-2 border-cyan-700 drop-shadow-md transition duration-200 ease-out hover:shadow-2xl hover:scale-105 hover:ease-in hover:drop-shadow-2xl w-3/4 place-self-center rounded-sm
+    @apply m-0 p-0 bg-sky-100 border-solid border-2 border-cyan-700 drop-shadow-md transition duration-200 ease-out hover:shadow-2xl hover:scale-105 hover:ease-in hover:drop-shadow-2xl w-3/4 place-self-center rounded-sm
   }
 
   .profile-img {
-    @apply z-0 
+    @apply z-0 m-0 p-0
   }
 
   .profile-item-1 {
-    @apply bg-sky-50 p-5
+    @apply bg-sky-50 p-5 shrink
   }
 
   .profile-item-2 {
@@ -87,17 +89,21 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: 300% 300%;
+    background-size: 400% 400%;
     background-image: linear-gradient(-45deg,
         rgba(59, 173, 227, 1) 0%,
-        rgba(87, 111, 230, 1) 25%,
-        rgba(152, 68, 183, 1) 51%,
-        rgba(255, 53, 127, 1) 100%);
+        rgba(87, 111, 230, 1) 15%,
+        rgba(255, 120, 0, 1) 30%,
+        rgba(255, 53, 127, 1) 45%,
+        rgba(0, 255, 200, 1) 60%,
+        rgba(152, 68, 183, 1) 75%,
+        rgba(255, 0, 120, 1) 100%);
     animation: AnimateBG 20s ease infinite;
     font-family: 'Suez One', serif;
 
     @apply self-center text-center p-32 bg-sky-300 w-screen lg:text-7xl text-white text-5xl
   }
+
 
   @keyframes AnimateBG {
     0% {
@@ -218,5 +224,14 @@ a {
   .projects p:last-child {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+  }
+
+  .adaptive-image {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
