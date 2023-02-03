@@ -34,14 +34,15 @@ function Projects() {
     ]
 
     useEffect(() => {
-        const bgColors = [];
-        projects.forEach(() => {
-            bgColors.push(getRandomColor());
-        })
-        setTimeout(() => {
+        const interval = setInterval(() => {
+            const bgColors = [];
+            projects.forEach(() => {
+                bgColors.push(getRandomColor());
+            })
             setBackgroundColors(bgColors);
-        }, 3000)
-    }, [projects])
+        }, 2000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <>

@@ -136,14 +136,15 @@ function Learning() {
     }
 
     useEffect(() => {
-        const bgColors = [];
-        learning.university.forEach(() => {
-            bgColors.push(getRandomColor());
-        })
-        setTimeout(() => {
+        const interval = setInterval(() => {
+            const bgColors = [];
+            learning.university.forEach(() => {
+                bgColors.push(getRandomColor());
+            })
             setBackgroundColors(bgColors);
-        }, 3000)
-    }, [learning.university])
+        }, 2000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <>
