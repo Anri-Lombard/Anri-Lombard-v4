@@ -40,7 +40,7 @@ function About() {
                     </div>
                     <div className="w-2/3 flex flex-col">
                         <span className="profile-item-1">
-                            👈 <strong>That's me</strong>. Now, I know what you're thinking: How did it end up like this...
+                            👈 <strong>That&apos;s me</strong>. Now, I know what you&apos;re thinking: How did it end up like this...
                         </span>
                         <span className="profile-item-2" style={{ backgroundColor: backgroundColor }}>
                             In <strong>2002</strong>, a beautiful, dirty-blonde, hazel-brown-eyed demi-god baby was born, clearly destined to be a Greek God...
@@ -48,7 +48,7 @@ function About() {
                             for him, that is. I knew then and there <strong>my life would lead to being a nerd, a full-time nerd</strong>.
                         </span>
                         <span className="profile-item-1">
-                            That's why <strong>I study Computer Science and Mathematical Statistics at the University of Cape Town</strong>.
+                            That&apos;s why <strong>I study Computer Science and Mathematical Statistics at the University of Cape Town</strong>.
                         </span>
                         <span className="profile-item-2" style={{ backgroundColor: backgroundColor }}>
                             Most of my learning, however, is done outside of Uni, given the growing world-class education offered online. There I pursue

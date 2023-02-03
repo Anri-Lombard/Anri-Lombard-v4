@@ -171,14 +171,14 @@ function Projects() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            const bgColors = [];
+            const bgColors: any = [];
             projects.forEach(() => {
                 bgColors.push(getRandomColor());
             })
             setBackgroundColors(bgColors);
         }, 2000);
         return () => clearInterval(interval);
-    }, []);
+    });
 
     return (
         <>
