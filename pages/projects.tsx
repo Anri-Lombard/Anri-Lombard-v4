@@ -1,14 +1,6 @@
 import Image from 'next/image';
-import CodingInterviewUniImage from '../public/images/CIU.png';
-import MicrogradImage from '../public/images/Micrograd.jpeg';
-import MakemoreImage from '../public/images/Makemore.jpeg';
-import GANSImage from '../public/images/GANS.jpeg';
-import DefeasibleReasoningToolImage from '../public/images/DefeasibleReasoning.png';
-import DeepLearningImage from '../public/images/DeepLearning.jpeg';
-import RocketImage from '../public/images/Rocket.png';
-import MLForEveryoneImage from '../public/images/MLForEveryone.jpeg';
-import IBMDataScienceImage from '../public/images/IBMDataScience.jpeg';
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
+import DeepLearningImage from '../public/images/DeepLearning.png';
 
 import Head from 'next/head';
 
@@ -25,11 +17,46 @@ function Projects() {
     const projects = [
         {
             id: 1,
-            image: CodingInterviewUniImage,
-            title: "Coding Interview University",
-            topic: "Education",
-            description: "Helping students prepare for coding interviews, created by an Amazon engineer that came from a background without a CS degree.",
-            link: "https://github.com/jwasham/coding-interview-university",
+            image: DeepLearningImage,
+            title: "NLP Specialisation by DeepLearning.AI",
+            topic: "Natural Language Processing",
+            description: `
+                <p> 
+                    Completed the NLP Specialisation on Coursera by DeepLearning.AI. This specialisation covered various topics in NLP, 
+                    from sentiment analysis, sequence modeling, machine translation, named entity recognition, text classification to attention and transformers. 
+                    The following are some of the projects completed as part of the specialisation: 
+                    <ol> 
+                        <li>Sentiment Analysis of IMDB Reviews</li> 
+                        <li>Named Entity Recognition</li> 
+                        <li>Text Classification</li> 
+                        <li>Machine Translation</li> 
+                        <li>Question Answering using Transformers</li> 
+                        <li>Building a Chatbot</li> 
+                    </ol> 
+                </p>
+            `,
+            link: "https://www.coursera.org/specializations/natural-language-processing",
+        },
+        {
+            id: 2,
+            image: DeepLearningImage,
+            title: "Deep Learning Specialisation by DeepLearning.AI",
+            topic: "Deep Learning",
+            description: `
+                <p>
+                    Completed the Deep Learning Specialisation on Coursera by DeepLearning.AI. This specialisation covered various topics in Deep Learning, 
+                    from convolutional neural networks, recurrent neural networks, Generative Adversarial Networks, transfer learning and deep reinforcement 
+                    learning. The following are some of the projects completed as part of the specialisation: 
+                    <ol> 
+                        <li>Digit Recognition using Convolutional Neural Networks</li> 
+                        <li>Language Translation using Recurrent Neural Networks</li> 
+                        <li>Generating New Images using Generative Adversarial Networks</li> 
+                        <li>Using Transfer Learning for Image Recognition</li> 
+                        <li>Building a Deep Reinforcement Learning Agent</li> 
+                    </ol>  
+                </p>
+            `,
+            link: "https://www.coursera.org/specializations/deep-learning",
         }
     ]
 
@@ -63,19 +90,20 @@ function Projects() {
                             <button
                                 key={index}
                                 className="project transition duration-150 ease-out hover:ease-in"
-                                style={{ backgroundColor: backgroundColors[index]}}
+                                style={{ backgroundColor: backgroundColors[index] }}
                             >
                                 <div className="flex md:flex-row flex-col">
-                                    
-                                    <div className="flex-col md:drop-shadow-xl drop-shadow-sm">
-                                        <Image src={project.image} alt="Picture of {project.title}" className='rounded-sm adaptive-image' />
+
+                                    <div className="flex w-1/3 justify-center items-center">
+                                        <Image src={project.image} alt="Picture of {project.title}" className='rounded-sm' />
                                     </div>
-                                    <div className="flex-col md:ml-10">
+
+                                    <div className="flex-2 w-2/3 md:ml-10">
                                         <div className="flex-auto flex-grow text-xl font-extrabold hover:text-white transition duration-250 ease-out">
                                             <a href={project.link} target="_blank" rel="noreferrer">{project.title}</a>
                                         </div>
                                         <div className="flex-auto text-sm font-thin">{project.topic}</div>
-                                        <div className="pt-5">{project.description}</div>
+                                        <div className="pt-5" dangerouslySetInnerHTML={{ __html: project.description }}></div>
                                     </div>
 
                                 </div>
@@ -86,7 +114,7 @@ function Projects() {
 
             </div>
         </>
-        
+
     )
 }
 

@@ -122,10 +122,10 @@ function Learning() {
         }
 
         // Toggle element style for visibility when clicked
-        if (element.classList.contains("scale-150"))
-            element.classList.remove("scale-150", "z-10", "drop-shadow-2xl")
+        if (element.classList.contains("scale-105"))
+            element.classList.remove("scale-105", "z-10", "drop-shadow-2xl")
         else
-            element.classList.add("scale-150", "z-10", "drop-shadow-2xl")
+            element.classList.add("scale-105", "z-10", "drop-shadow-2xl")
 
         // Toggle course name and description on click
         if (element.innerHTML === course.description) {
