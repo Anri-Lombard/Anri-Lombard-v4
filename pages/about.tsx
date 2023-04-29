@@ -22,7 +22,7 @@ function About() {
                 <div className="flex flex-col mt-10 profile">
                     <div className="flex flex-col">
                         <span className="profile-item-1">
-                            <strong>That&apos;s me</strong>. Now, I know what you&apos;re thinking: "Was it fate, destiny, or a glitch in the Matrix?"
+                            <strong>That&apos;s me</strong>. Now, I know what you&apos;re thinking: &quot;Was it fate, destiny, or a glitch in the Matrix?&quot;
                         </span>
                         <span className="profile-item-2">
                             In <strong>2002</strong>, a jaw-dropping, dirty-blonde, hazel-brown-eyed demigod baby was born, destined to grace the covers of GQ...
