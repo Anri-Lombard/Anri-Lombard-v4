@@ -1,8 +1,5 @@
 import Image from 'next/image';
-// import { useState, useEffect } from 'react';
 import DeepLearningImage from '../public/images/DeepLearning.png';
-import Stanford from '../public/images/Stanford.png';
-import IBM from '../public/images/IBM.png';
 import NLP from '../public/images/NLP.jpeg';
 import GANS from '../public/images/GANS.png';
 import AIMed from '../public/images/AIMed.jpeg';
