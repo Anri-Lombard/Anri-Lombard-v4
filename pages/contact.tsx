@@ -11,16 +11,26 @@ function Contact() {
                 <div className="page-intro">
                     Contact
                 </div>
-                <div className="contact max-w-2xl">
-                    Hey there! I may spend most of my days exploring the red planet and searching for unicorns, but I still make time to check my emails. 
-                    Just in case, you know, a unicorn sends me a message. So if you need to get in touch, don&apos;t hesitate to send an email my way, just don&apos;t
-                    be surprised if I take one, two (or three) days to respond, these unicorns sure hide well! My email address is {" "}
-                    <strong><a href="mailto:anri.m.lombard@gmail.com">anri.m.lombard@gmail.com</a></strong>.
+                <div className="contact max-w-2xl mt-10">
+                    <p className="mb-5">
+                        Hey there! When I&lsquo;m not busy diving into the world of Machine Learning or studying Computer Science and Mathematical Statistics, I make sure to stay connected.
+                    </p>
+                    <p className="mb-5">
+                        So, if you want to discuss a project, share insights, or just chat about coding and statistics, don&lsquo;t hesitate to reach out. Keep in mind that I might take a day or two to respond, as I&lsquo;m often engaged in the delightful dance of coding and studying.
+                    </p>
+                    <p>
+                        My school email address is{" "}
+                        <strong>
+                            <a href="mailto:lmbanr001@myuct.ac.za" className="text-blue-600 hover:text-blue-800 transition duration-300">
+                                lmbanr001@myuct.ac.za
+                            </a>
+                        </strong>
+                        .
+                    </p>
                 </div>
-                
             </div>
         </>
-    )
+    );
 }
 
 export default Contact;

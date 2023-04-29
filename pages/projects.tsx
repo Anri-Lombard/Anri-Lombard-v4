@@ -1,32 +1,26 @@
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
 import DeepLearningImage from '../public/images/DeepLearning.png';
-import Stanford from '../public/images/Stanford.png';
-import IBM from '../public/images/IBM.png';
+import NLP from '../public/images/NLP.jpeg';
+import GANS from '../public/images/GANS.png';
+import AIMed from '../public/images/AIMed.jpeg';
+import MachineLearning from '../public/images/MachineLearning.jpeg';
+import MLOps from '../public/images/MLOps.png';
+import DataScience from '../public/images/DataScience.jpeg';
 
 import Head from 'next/head';
 
 function Projects() {
-    const [backgroundColors, setBackgroundColors] = useState([]);
-
-    function getRandomColor() {
-        const colors = ['#1abc9c', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c'];
-        const randomIndex = Math.floor(Math.random() * colors.length);
-        return colors[randomIndex];
-    }
 
 
     const projects = [
         {
             id: 1,
-            image: DeepLearningImage,
+            image: NLP,
             title: "NLP Specialisation by DeepLearning.AI",
             topic: "Natural Language Processing",
             description: `
                 <p> 
-                    Completed the NLP Specialisation on Coursera by DeepLearning.AI. This specialisation covered various topics in NLP, 
-                    from sentiment analysis, sequence modeling, machine translation, named entity recognition, text classification to attention and transformers. 
-                    The following are some of the projects completed as part of the specialisation: 
+                    Successfully completed the NLP Specialisation on Coursera by DeepLearning.AI, covering a wide range of topics, such as sentiment analysis, sequence modeling, machine translation, named entity recognition, and text classification. Key projects include:
                     <ol> 
                         <li>Sentiment Analysis of IMDB Reviews</li> 
                         <li>Named Entity Recognition</li> 
@@ -46,9 +40,7 @@ function Projects() {
             topic: "Deep Learning",
             description: `
                 <p>
-                    Completed the Deep Learning Specialisation on Coursera by DeepLearning.AI. This specialisation covered various topics in Deep Learning, 
-                    from convolutional neural networks, recurrent neural networks, Generative Adversarial Networks, transfer learning and deep reinforcement 
-                    learning. The following are some of the projects completed as part of the specialisation: 
+                    Accomplished the Deep Learning Specialisation on Coursera by DeepLearning.AI, which encompassed various deep learning topics like convolutional neural networks, recurrent neural networks, Generative Adversarial Networks, transfer learning, and deep reinforcement learning. Key projects include:
                     <ol> 
                         <li>Digit Recognition using Convolutional Neural Networks</li> 
                         <li>Language Translation using Recurrent Neural Networks</li> 
@@ -62,31 +54,26 @@ function Projects() {
         },
         {
             id: 3,
-            image: DeepLearningImage,
+            image: GANS,
             title: "GANS Specialisation by DeepLearning.AI",
             topic: "Generative Adversarial Networks",
             description: `
-                <p> 
-                    <span>
-                        Completed the GANS Specialisation on Coursera by DeepLearning.AI. This specialisation covered various topics in Generative Adversarial 
-                        Networks, from generative models, adversarial loss, cycle consistency loss to multi-player GANs and Wasserstein GANs. The following are 
-                        some of the projects completed as part of the specialisation: 
-                    </span>
-                    
-                    <ol> 
-                        <li>Generating new images with Generative Adversarial Networks</li> 
-                        <li>Semi-Supervised Learning with GANs</li> 
-                        <li>Image-to-Image Translation with Cycle Consistency Loss</li> 
-                        <li>Multi-Player GANs for generating new data distributions</li> 
-                        <li>Wasserstein GANs for improved stability and performance</li> 
-                    </ol> 
-                </p>
-            `,
+            <p> 
+                Completed the GANS Specialisation on Coursera by DeepLearning.AI, which delved into various aspects of Generative Adversarial Networks, including generative models, adversarial loss, cycle consistency loss, multi-player GANs, and Wasserstein GANs. Key projects include:
+                <ol> 
+                    <li>Generating new images with Generative Adversarial Networks</li> 
+                    <li>Semi-Supervised Learning with GANs</li> 
+                    <li>Image-to-Image Translation with Cycle Consistency Loss</li> 
+                    <li>Multi-Player GANs for generating new data distributions</li> 
+                    <li>Wasserstein GANs for improved stability and performance</li> 
+                </ol> 
+            </p>
+        `,
             link: "https://www.coursera.org/account/accomplishments/specialization/certificate/PT2AYCUE3XDY",
         },
         {
             id: 4,
-            image: DeepLearningImage,
+            image: AIMed,
             title: "AI for Medicine Specialisation by DeepLearning.AI",
             topic: "Artificial Intelligence for Medicine",
             description: `
@@ -107,7 +94,7 @@ function Projects() {
         },
         {
             id: 5,
-            image: Stanford,
+            image: MachineLearning,
             title: "Machine Learning Specialisation by DeepLearning.AI and Stanford University",
             topic: "Machine Learning",
             description: `
@@ -128,7 +115,7 @@ function Projects() {
         },
         {
             id: 6,
-            image: DeepLearningImage,
+            image: MLOps,
             title: "MLOps Specialisation by DeepLearning.AI",
             topic: "Machine Learning Engineering for Production",
             description: `
@@ -148,8 +135,8 @@ function Projects() {
             link: "https://www.coursera.org/account/accomplishments/specialization/certificate/FP2F6K9ZRB2L",
         },
         {
-            id: 5,
-            image: IBM,
+            id: 7,
+            image: DataScience,
             title: "Data Science Project for IBM Skills Network Specialisation",
             topic: "Data Science and Machine Learning",
             description: `
@@ -165,20 +152,10 @@ function Projects() {
                     </ol> 
                 </p>
             `,
-            link: "https://www.coursera.org/specializations/ibm-data-science",
-            }
+            link: "https://www.coursera.org/account/accomplishments/specialization/certificate/CJ52WZ2MR8B7",
+        }
     ]
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            const bgColors: any = [];
-            projects.forEach(() => {
-                bgColors.push(getRandomColor());
-            })
-            setBackgroundColors(bgColors);
-        }, 3000);
-        return () => clearInterval(interval);
-    });
 
     return (
         <>
@@ -191,26 +168,20 @@ function Projects() {
                     Projects
                 </div>
 
-
-                <div className="box-container md:m-10 mt-10">
-                    <h4 className="heading_2">I am mostly interested in machine learning, although web and game development are fun hobbies I will sometimes delve into</h4>
+                <div className="box-container md:m-10 mt-10 grid md:grid-cols-2 gap-4">
+                    <h4 className="heading_2 col-span-full">I am mostly interested in machine learning, although web and game development are fun hobbies I will sometimes delve into</h4>
                     {
                         projects.map((project, index) => (
-                            <button
-                                key={index}
-                                className="project"
-                                style={{ backgroundColor: backgroundColors[index] }}
-                            >
+                            <div key={index} className="project card border rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
                                 <a href={project.link} target="_blank" rel="noreferrer">
-                                    <div className="flex md:flex-row flex-col">
+                                    <div className="flex flex-col">
 
-                                        <div className="flex md:w-1/3 justify-center items-center">
-                                            <Image src={project.image} alt="Picture of {project.title}" className='rounded-sm' />
+                                        <div className="flex justify-center items-center">
+                                            <Image src={project.image} alt={`Picture of ${project.title}`} className="adaptive-image rounded-sm" />
                                         </div>
 
-
-                                        <div className="flex-2 p-5 md:w-2/3 md:ml-10">
-                                            <div className="flex-auto flex-grow text-xl font-extrabold hover:text-white transition duration-250 ease-out">
+                                        <div className="flex-2 p-5">
+                                            <div className="flex-auto flex-grow text-xl font-extrabold hover:text-primary transition duration-250 ease-out">
                                                 {project.title}
                                             </div>
                                             <div className="flex-auto text-sm font-thin">{project.topic}</div>
@@ -219,14 +190,12 @@ function Projects() {
 
                                     </div>
                                 </a>
-                            </button>
+                            </div>
                         ))
                     }
                 </div>
-
             </div>
         </>
-
     )
 }
 
