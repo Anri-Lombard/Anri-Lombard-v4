@@ -1,25 +1,10 @@
 import Image from 'next/image';
-import AnriIMG from '../public/images/Anri.jpg';
+import AnriIMG from '../public/images/Anri.png';
 import Head from 'next/head';
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 
 function About() {
-
-    const [backgroundColor, setBackgroundColor] = useState("");
-
-    function getRandomColor() {
-        const colors = ['#1abc9c', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c'];
-        const randomIndex = Math.floor(Math.random() * colors.length);
-        return colors[randomIndex];
-    }
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setBackgroundColor(getRandomColor());
-        }, 3000);
-        return () => clearInterval(interval);
-    }, []);
 
     return (
         <>
@@ -31,31 +16,26 @@ function About() {
                 <div className="page-intro">
                     About
                 </div>
-                <div className="xl:hidden mt-10 flex-auto w-1/2 lg:w-1/3 border-solid border-2 border-white rounded-sm xl:w-full profile-img self-center">
-                    <Image src={AnriIMG} alt="Profile Picture" />
+                <div className="mt-10 flex-auto w-full lg:w-1/2 xl:w-1/3 border-solid border-2 border-[#e0f2fe] rounded-sm self-center">
+                    <Image src={AnriIMG} alt="Profile Picture" layout="responsive" width={640} height={427} className="object-cover rounded-sm" />
                 </div>
-                <div className="flex m-10 profile">
-                    <div className="hidden xl:block w-1/3 self-center border-solid border-2 border-white rounded-sm">
-                        <Image src={AnriIMG} alt="Profile Picture" />
-                    </div>
-                    <div className="xl:w-2/3 flex flex-col">
+                <div className="flex flex-col mt-10 profile">
+                    <div className="flex flex-col">
                         <span className="profile-item-1">
-                            👈 <strong>That&apos;s me</strong>. Now, I know what you&apos;re thinking: How did it end up like this...
+                            <strong>That&apos;s me</strong>. Now, I know what you&apos;re thinking: "Was it fate, destiny, or a glitch in the Matrix?"
                         </span>
-                        <span className="profile-item-2" style={{ backgroundColor: backgroundColor }}>
-                            In <strong>2002</strong>, a beautiful, dirty-blonde, hazel-brown-eyed demi-god baby was born, clearly destined to be a Greek God...
-                            and right next to him I popped out a few minutes later. A future as an award-winning, ripped model was inevitable...
-                            for him, that is. I knew then and there <strong>my life would lead to being a nerd, a full-time nerd</strong>.
+                        <span className="profile-item-2">
+                            In <strong>2002</strong>, a jaw-dropping, dirty-blonde, hazel-brown-eyed demigod baby was born, destined to grace the covers of GQ...
+                            and right next to him, I made my grand entrance just a few minutes later. While a future of magazine covers and chiseled abs awaited him,
+                            I realized early on that <strong>my path would lead to nerdom, glorious nerdom</strong>.
                         </span>
                         <span className="profile-item-1">
-                            That&apos;s why <strong>I study Computer Science and Mathematical Statistics at the University of Cape Town</strong>.
+                            Embracing my inner geek, <strong>I study Computer Science and Mathematical Statistics at the University of Cape Town</strong>.
                         </span>
-                        <span className="profile-item-2" style={{ backgroundColor: backgroundColor }}>
-                            Most of my learning, however, is done outside of Uni, given the growing world-class education offered online. There I pursue
-                            a deeper understanding of <strong>Machine Learning</strong>, hoping to add some good to the world as a software addict... uh hum, I mean
-                            engineer. <strong>My days are mostly filled with coding and studying</strong>, since these things seem to make me happy, and neither can bench more
-                            than me 😄.
+                        <span className="profile-item-2">
+                            But I don&apos;t just stop there. Most of my learning happens outside the hallowed halls of Uni, thanks to the ever-expanding universe of online education. It&apos;s there that I dive headfirst into the world of <strong>Machine Learning</strong>, aspiring to make a difference as a code wizard... err, I mean, engineer. <strong>My days are filled with the delightful dance of coding and studying</strong>, which not only brings me joy but also has the added benefit of never challenging me to a bench press competition 😄.
                         </span>
+
                     </div>
                 </div>
 
