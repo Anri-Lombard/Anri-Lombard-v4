@@ -17,9 +17,9 @@ const Home: NextPage = () => {
           Welcome to Anri Lombard&apos;s website!
         </div>
         <div className="font-semibold text-2xl mb-10 text-center text-[#6b7280] max-w-2xl mx-auto">
-          The home of a professional ice skater and now Quidditch coach extraordinaire. 
-          Ready to embark on an adventure filled with twists and turns? Then join us as we 
-          delve into his life. 
+          The home of a professional ice skater and now Quidditch coach extraordinaire.
+          Ready to embark on an adventure filled with twists and turns? Then join us as we
+          delve into his life.
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#93c5fd] text-[#1e3a8a] p-4 rounded-md text-center cursor-pointer">
@@ -37,6 +37,13 @@ const Home: NextPage = () => {
           <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#f9a8d4] text-[#be185d] p-4 rounded-md text-center cursor-pointer">
             <Link href="https://anri-lombard.github.io/">💬 Read his thoughts</Link>
           </div>
+          <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#c7d2fe] text-[#1e40af] p-4 rounded-md text-center cursor-pointer">
+            <a href="https://github.com/Anri-Lombard" target="_blank" rel="noopener noreferrer">📁 View his GitHub</a>
+          </div>
+          <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#e0e7ff] text-[#1d4ed8] p-4 rounded-md text-center cursor-pointer">
+            <a href="https://www.linkedin.com/in/anri-lombard-ab37ab201/" target="_blank" rel="noopener noreferrer">🔗 Connect on LinkedIn</a>
+          </div>
+
         </div>
       </main>
     </div>
