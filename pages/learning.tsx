@@ -3,14 +3,6 @@ import Head from 'next/head';
 
 function Learning() {
 
-    const [backgroundColors, setBackgroundColors] = useState([]);
-
-    function getRandomColor() {
-        const colors = ['#1abc9c', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c'];
-        const randomIndex = Math.floor(Math.random() * colors.length);
-        return colors[randomIndex];
-    }
-
     const learning = {
         "university": [
             {
@@ -108,43 +100,20 @@ function Learning() {
         ]
     }
 
-    interface ILearning {
-        name: string,
-        description: string,
-        rating: number
-    }
-
     const flip = (course: { name: string; rating: string; description: string } | { name: string; rating: number; description: string }) => {
+
         const element = document.getElementById(course.name);
 
         if (element == null) {
             return
         }
 
-        // Toggle element style for visibility when clicked
-        if (element.classList.contains("scale-105"))
-            element.classList.remove("scale-105", "z-10", "drop-shadow-2xl")
-        else
-            element.classList.add("scale-105", "z-10", "drop-shadow-2xl")
-
         // Toggle course name and description on click
         if (element.innerHTML === course.description) {
             element.innerHTML = "<pre>" + course.rating + "\n" + course.name + "</pre>"
         } else
             element.innerHTML = course.description
-
     }
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            const bgColors: any = [];
-            learning.university.forEach(() => {
-                bgColors.push(getRandomColor());
-            })
-            setBackgroundColors(bgColors);
-        }, 3000);
-        return () => clearInterval(interval);
-    });
 
     return (
         <>
@@ -164,9 +133,8 @@ function Learning() {
                             <button
                                 key={index}
                                 id={course.name}
-                                className="box"
+                                className="box transition duration-150 ease-out hover:ease-in hover:border-blue-500 hover:scale-105 hover:shadow-md"
                                 onClick={() => flip(course)}
-                                style={{ backgroundColor: backgroundColors[index]}}
                             >
                                 <div>{course.rating}</div>
                                 <div>{course.name}</div>
@@ -183,9 +151,8 @@ function Learning() {
                             <button
                                 key={index}
                                 id={course.name}
-                                className="box transition duration-150 ease-out hover:ease-in"
+                                className="box transition duration-150 ease-out hover:ease-in hover:border-blue-500 hover:scale-105 hover:shadow-md"
                                 onClick={() => flip(course)}
-                                style={{ backgroundColor: backgroundColors[index]}}
                             >
                                 <div>{course.rating}</div>
                                 <div>{course.name}</div>
