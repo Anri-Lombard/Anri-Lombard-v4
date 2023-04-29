@@ -230,11 +230,25 @@ a {
   }
 
   .adaptive-image {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
     object-fit: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+/* Media queries for responsive images on different devices */
+@media screen and (min-width: 768px) {
+  .adaptive-image {
+    max-width: 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .adaptive-image {
+    max-width: 300px;
   }
 }
