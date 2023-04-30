@@ -69,7 +69,7 @@ function Learning() {
             {
                 name: "Deep learning Specialization",
                 rating: "⭐️⭐️⭐️⭐️⭐️",
-                description: "It is no exaggeration that this is the single most intriguing course I've ever done. It introduced gradient descent, forward and backward propogation, and what to focus on when building deep learning models, amongst many other topics. The lecturer, Andrew Ng, has been an inspirational figure to me ever since",
+                description: "It is no exaggeration that this is the single most intriguing course I've ever done. It introduced gradient descent, forward and backward propagation, and what to focus on when building deep learning models, amongst many other topics. The lecturer, Andrew Ng, has been an inspirational figure to me ever since",
                 link: "https://www.coursera.org/account/accomplishments/specialization/N3RKPLZN6H2S"
             },
             {
