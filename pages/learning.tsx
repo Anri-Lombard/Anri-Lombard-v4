@@ -19,6 +19,23 @@ function Learning() {
             element.innerHTML = course.description
     }
 
+    // Custom comparator function for sorting
+    const customSort = (a: any, b: any) => {
+        const aName = a.name.charAt(3);
+        const bName = b.name.charAt(3);
+
+        if (aName > bName) {
+            return -1;
+        } else if (aName < bName) {
+            return 1;
+        } else {
+            return 0;
+        }
+    };
+
+    // Sort the 'university' array
+    learning['university'].sort(customSort);
+
     return (
         <>
             <Head>
