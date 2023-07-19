@@ -22,7 +22,7 @@ function About() {
                 <div className="flex flex-col mt-10 profile">
                     <div className="flex flex-col">
                         <span className="profile-item-1">
-                            <strong>That&apos;s me</strong>. Now, I know what you&apos;re thinking: &quot;Was it fate, destiny, or a glitch in the Matrix?&quot;
+                            <strong>That&apos;s me</strong>. Now, I know what you&apos;re thinking: &quot;Have you always been this short?&quot; Well...
                         </span>
                         <span className="profile-item-2">
                             In <strong>2002</strong>, a jaw-dropping, dirty-blonde, hazel-brown-eyed demigod baby was born, destined to grace the covers of GQ...
@@ -33,7 +33,7 @@ function About() {
                             Embracing my inner geek, <strong>I study Computer Science and Mathematical Statistics at the University of Cape Town</strong>.
                         </span>
                         <span className="profile-item-2">
-                            But I don&apos;t just stop there. Most of my learning happens outside the hallowed halls of Uni, thanks to the ever-expanding universe of online education. It&apos;s there that I dive headfirst into the world of <strong>Machine Learning</strong>, aspiring to make a difference as a code wizard... err, I mean, engineer. <strong>My days are filled with the delightful dance of coding and studying</strong>, which not only brings me joy but also has the added benefit of never challenging me to a bench press competition 😄.
+                            But I don&apos;t just stop there. Most of my learning happens outside the hallowed halls of Uni, thanks to the ever-expanding universe of online education. It&apos;s there that I dive headfirst into the world of <strong>Machine Learning</strong>, aspiring to make a difference as a code wizard... err, I mean, engineer. <strong>My days are filled with a bunch of coding and studying</strong>, which not only makes me happy, but has the added benefit of never challenging me to a bench press competition 😄.
                         </span>
 
                     </div>

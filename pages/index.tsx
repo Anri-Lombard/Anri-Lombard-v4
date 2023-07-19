@@ -17,9 +17,7 @@ const Home: NextPage = () => {
           Welcome to Anri Lombard&apos;s website!
         </div>
         <div className="font-semibold text-2xl mb-10 text-center text-[#6b7280] max-w-2xl mx-auto">
-          The home of a professional ice skater and now Quidditch coach extraordinaire.
-          Ready to embark on an adventure filled with twists and turns? Then join us as we
-          delve into his life.
+          The website of a professional ice skater, Quidditch coach extraordinaire, and Sadie Green&apos;s future husband.
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#93c5fd] text-[#1e3a8a] p-4 rounded-md text-center cursor-pointer">
