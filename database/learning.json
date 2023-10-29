@@ -1,8 +1,18 @@
 {
     "university": [
         {
+            "name": "STA3043S",
+            "rating": "⭐️⭐️⭐️⭐️⭐️",
+            "description": "This was the concluding undergraduate course in mathematical statistics. It encompassed Bayesian statistics, an introduction to machine learning, and general linear models. Utilizing AI tools like ChatGPT certainly enhanced the learning experience, making it easier to grasp complex concepts, though it remained both challenging and engaging."
+        },        
+        {
+            "name": "CSC3003S",
+            "rating": "⭐️⭐️⭐️⭐️⚫️",
+            "description": "The course was the final undergraduate cs course that taught us about advanced software development, theory of algorithms, and theory of computation. The most profound realization from the course was understanding that Alan Turing was beyond smart."
+        },
+        {
             "name": "CSC3002F",
-            "rating": "⭐️⭐️⭐️⭐️",
+            "rating": "⭐️⭐️⭐️⭐️⚫️",
             "description": "We learned about networks, operating systems, and a bit of professional writing. The assignments were not challenging enough, although this might be because ChatGPT was available..."
         },
         {
@@ -12,12 +22,12 @@
         },
         {
             "name": "STA3041F",
-            "rating": "⭐️⭐️⭐️⭐️",
+            "rating": "⭐️⭐️⭐️⭐️⚫️",
             "description": "Once again statistics took me the longest to study. The content was digestible, but so easy to get wrong; however, it was fascinating to learn about markov chains, poisson processes and time series modeling!"
         },
         {
             "name": "MAM1000W",
-            "rating": "⭐️⭐️⭐️⭐️",
+            "rating": "⭐️⭐️⭐️⭐️⚫️",
             "description": "The only drawback this course had was its occurrence during Covid, so I couldn't interact with lecturers to grasp the content well, but the math recap from high school was fantastic!"
         },
         {
@@ -27,22 +37,22 @@
         },
         {
             "name": "MAM1019H",
-            "rating": "⭐️⭐️",
+            "rating": "⭐️⭐️⚫️⚫️⚫️",
             "description": "Besides a very interesting and helpful tutor, this course did not do the mathematics justice. The self-study led me down a rabbit hole of deciphering proofs, which was useful, I guess..."
         },
         {
             "name": "MAM1008S",
-            "rating": "⭐️⭐️⭐️⭐️",
+            "rating": "⭐️⭐️⭐️⭐️⚫️",
             "description": "Some introductory Linear Algebra was taught, which gave a new dimension to my high-school-math brain. Overall it was a small and easily-digestible course"
         },
         {
             "name": "CSC1015F",
-            "rating": "⭐️⭐️⭐️",
+            "rating": "⭐️⭐️⭐️⚫️⚫️",
             "description": "This was an introductory course using Python. The content was targeted at beginners, so frustrated me. The most difficult section was Recursion, which proved to be the most exciting part of the course"
         },
         {
             "name": "CSC1016S",
-            "rating": "⭐️⭐️⭐️⭐️",
+            "rating": "⭐️⭐️⭐️⭐️⚫️",
             "description": "This introductory Data Structures in Java course included learning about types of tree structures, linked lists, heaps, and other fundamental structures. I already did most of the content on MIT OpenCourseWare, but UCT allowed some hands-on experience"
         },
         {
@@ -52,7 +62,7 @@
         },
         {
             "name": "CSC2001F",
-            "rating": "⭐️⭐️⭐️⭐️",
+            "rating": "⭐️⭐️⭐️⭐️⚫️",
             "description": "We learned about Database design, the Unix environment, and Advanced Data Structures such as graphs and hash tables. The assignments were decently challenging and the in-person experience of programming in groups quite energizing"
         },
         {
@@ -72,7 +82,7 @@
         },
         {
             "name": "CSC2005Z",
-            "rating": "⭐️⭐️⭐️⭐️",
+            "rating": "⭐️⭐️⭐️⭐️⚫️",
             "description": "A computer science research course for academically-inclined students. The research content was mildly interesting (Knowledge Representation), but more enjoyable was that I got to program a website and GUI, learn how to present my findings in a report and present it to scientists. It was mostly self-study, which I liked most"
         }
     ],
@@ -91,13 +101,13 @@
         },
         {
             "name": "IBM Data Science",
-            "rating": "⭐️⭐️⭐️⭐️",
+            "rating": "⭐️⭐️⭐️⭐️⚫️",
             "description": "This course was a great overview of Data Science, and I learned about SQL, Python for AI and data analysis, Data Science Methodology, and Machine Learning, all while building a capstone project",
             "link": "https://www.coursera.org/account/accomplishments/specialization/PT2AYCUE3XDY"
         },
         {
             "name": "Entrepreneurship by Wharton",
-            "rating": "⭐️⭐️⭐️⭐️",
+            "rating": "⭐️⭐️⭐️⭐️⚫️",
             "description": "As a more technical-minded person, the business side is not my forte. This course taught me about how to (1) develop opportunities, (2) launch a startup, (3) growth strategies, and (4) finance and profitability. Of course, real experience would be an even better teacher",
             "link": "https://www.coursera.org/account/accomplishments/specialization/PT2AYCUE3XDY"
         },
