@@ -106,7 +106,9 @@ a {
     border-radius: 60%; /* Makes it oval or circular */
     width: fit-content; /* Adjust width to content */
     max-width: 90%; /* Prevents it from being too wide */
-    margin: auto; /* Center it horizontally */
+
+    margin-left: auto; /* Center it horizontally */
+    margin-right: auto; /* Center it horizontally */
   
     /* Tailwind Classes */
     @apply text-center bg-sky-300 text-white text-5xl lg:text-7xl;
@@ -188,6 +190,13 @@ a {
     color: $black;
 
   }
+
+  .three-container {
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    margin: 20px auto;
+  }
+  
 
   /* Numbers */
   .projects p:before {

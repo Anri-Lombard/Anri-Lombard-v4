@@ -1,29 +1,59 @@
-import Image from 'next/image';
-import DeepLearningImage from '../public/images/DeepLearning.png';
-import NLP from '../public/images/NLP.jpeg';
-import GANS from '../public/images/GANS.png';
-import AIMed from '../public/images/AIMed.jpeg';
-import MachineLearning from '../public/images/MachineLearning.jpeg';
-import MLOps from '../public/images/MLOps.png';
-import DataScience from '../public/images/DataScience.jpeg';
-import AIForGood from '../public/images/AIForGood.jpeg';
-
-import projects from '../database/projects.json';
+import { useEffect, useRef } from 'react';
 
 import Head from 'next/head';
 
+import anime from 'animejs';
+
 function Projects() {
-    // Map string values to actual images
-    const images: any = {
-        DeepLearningImage,
-        NLP,
-        GANS,
-        AIMed,
-        MachineLearning,
-        MLOps,
-        DataScience,
-        AIForGood
-    };
+
+    const funRef = useRef(null);
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        // Function to move the bubble away from the mouse pointer
+        const avoidMouse = (event) => {
+            if (funRef.current && containerRef.current) {
+                const bubble = funRef.current;
+
+                // Get the mouse position relative to the page
+                const mouseX = event.pageX;
+                const mouseY = event.pageY;
+
+                // Get the position and dimensions of the bubble
+                const bubbleRect = bubble.getBoundingClientRect();
+                const bubbleX = bubbleRect.left + window.scrollX + bubbleRect.width / 2;
+                const bubbleY = bubbleRect.top + window.scrollY + bubbleRect.height / 2;
+
+                // Calculate the distance from the center of the bubble to the mouse
+                const distanceX = mouseX - bubbleX;
+                const distanceY = mouseY - bubbleY;
+
+
+                // Determine the new position, with a max distance constraint
+                const maxDistance = 200; // Increased max distance to move the bubble
+                const avoidanceFactor = 20; // Increased for more "avoidance"
+                let translateX = (distanceX > 0 ? -1 : 1) * maxDistance;
+                let translateY = (distanceY > 0 ? -1 : 1) * maxDistance;
+
+                // Apply the transformation with anime.js
+                anime({
+                    targets: bubble,
+                    translateX: translateX,
+                    translateY: translateY,
+                    duration: 200, // Reduced duration for faster movement
+                    easing: 'easeOutQuad',
+                });
+            }
+        };
+
+        // Add mouse move event listener to the container
+        document.addEventListener('mousemove', avoidMouse);
+
+        // Cleanup event listener
+        return () => {
+            document.removeEventListener('mousemove', avoidMouse);
+        };
+    }, []);
 
     return (
         <>
@@ -31,36 +61,15 @@ function Projects() {
                 <title>Anri Lombard - Fun</title>
                 <meta name="description" content="Built projects and open source contributions" />
             </Head>
-            <div className="min-h-screen flex flex-col mx-10">
-                <div className="page-intro">
+            <div className="min-h-screen flex flex-col mx-10" ref={containerRef}>
+                <div className="page-intro m-auto"  ref={funRef}>
                     Fun
                 </div>
 
                 <div className="box-container md:m-10 mt-10 grid md:grid-cols-2 gap-4">
-                    {/* <h4 className="heading_2 col-span-full">I am mostly interested in machine learning, although web and game development are fun hobbies I will sometimes delve into</h4>
-                    {
-                        projects.map((project, index) => (
-                            <div key={index} className="project card border rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-                                <a href={project.link} target="_blank" rel="noreferrer">
-                                    <div className="flex flex-col">
 
-                                        <div className="flex justify-center items-center">
-                                            <Image src={images[project.image]} alt={`Picture of ${project.title}`} width={500} height={300} className="adaptive-image rounded-sm" />
-                                        </div>
-
-                                        <div className="flex-2 p-5">
-                                            <div className="flex-auto flex-grow text-xl font-extrabold hover:text-primary transition duration-250 ease-out">
-                                                {project.title}
-                                            </div>
-                                            <div className="flex-auto text-sm font-thin">{project.topic}</div>
-                                            <div className="pt-5" dangerouslySetInnerHTML={{ __html: project.description }}></div>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </div>
-                        ))
-                    } */}
+                    <p>ML and DS projects</p>
+                    
                 </div>
             </div>
         </>
