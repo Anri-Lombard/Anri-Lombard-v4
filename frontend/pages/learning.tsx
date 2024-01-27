@@ -46,7 +46,7 @@ function Learning() {
                 <div className="page-intro">
                     Learning
                 </div>
-                <h3 className="heading">University</h3>
+                <h3 className="heading">Inside University</h3>
                 <h4 className="heading_2">My main studies are done at the University of Cape Town with supplements online (Hint: tap the squares!)</h4>
                 <div className="box-container">
                     {

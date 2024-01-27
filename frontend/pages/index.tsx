@@ -99,6 +99,8 @@ const Home: NextPage = () => {
               "Love you 😘",
               10000,
               "Bye 😊",
+              10000,
+              "",
               9999999999
             ]}
             wrapper="span"
@@ -115,14 +117,14 @@ const Home: NextPage = () => {
             <Link href="/learning">📚 Discover his interests</Link>
           </div>
           <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#fbcfe8] text-[#8b5cf6] p-4 rounded-md text-center cursor-pointer">
-            <Link href="/projects">💻 Explore his projects</Link>
+            <Link href="/projects">💻 Have some FUN!</Link>
           </div>
           <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#fde68a] text-[#b45309] p-4 rounded-md text-center cursor-pointer">
             <Link href="/contact">📩 Get in touch</Link>
           </div>
-          <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#f9a8d4] text-[#be185d] p-4 rounded-md text-center cursor-pointer">
+          {/* <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#f9a8d4] text-[#be185d] p-4 rounded-md text-center cursor-pointer">
             <Link href="https://anri-lombard.github.io/">💬 Read his thoughts</Link>
-          </div>
+          </div> */}
           <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#c7d2fe] text-[#1e40af] p-4 rounded-md text-center cursor-pointer">
             <a href="https://github.com/Anri-Lombard" target="_blank" rel="noopener noreferrer">📁 View his GitHub</a>
           </div>

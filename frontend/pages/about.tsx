@@ -30,10 +30,14 @@ function About() {
                             I realized early on that <strong>my path would lead to nerdom, glorious nerdom</strong>.
                         </span>
                         <span className="profile-item-1">
-                            Embracing my inner geek, <strong>I study Computer Science and Mathematical Statistics at the University of Cape Town</strong>.
+                            Embracing my inner geek, <strong>I studied Computer Science and Mathematical Statistics at the University of Cape Town</strong>.
                         </span>
                         <span className="profile-item-2">
                             But I don&apos;t just stop there. Most of my learning happens outside the hallowed halls of Uni, thanks to the ever-expanding universe of online education. It&apos;s there that I dive headfirst into the world of <strong>Machine Learning</strong>, aspiring to make a difference as a code wizard... err, I mean, engineer. <strong>My days are filled with a bunch of coding and studying</strong>, which not only makes me happy, but has the added benefit of never challenging me to a bench press competition 😄.
+                        </span>
+                        <span className="profile-item-1">
+                            When I&apos;m not coding or studying, I spend time teaching students data science and machine learinng, playing my part to make sure
+                            that the next generation of data scientists is ready to take on the world.
                         </span>
 
                     </div>

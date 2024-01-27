@@ -28,16 +28,16 @@ function Projects() {
     return (
         <>
             <Head>
-                <title>Anri Lombard - Projects</title>
+                <title>Anri Lombard - Fun</title>
                 <meta name="description" content="Built projects and open source contributions" />
             </Head>
             <div className="min-h-screen flex flex-col mx-10">
                 <div className="page-intro">
-                    Projects
+                    Fun
                 </div>
 
                 <div className="box-container md:m-10 mt-10 grid md:grid-cols-2 gap-4">
-                    <h4 className="heading_2 col-span-full">I am mostly interested in machine learning, although web and game development are fun hobbies I will sometimes delve into</h4>
+                    {/* <h4 className="heading_2 col-span-full">I am mostly interested in machine learning, although web and game development are fun hobbies I will sometimes delve into</h4>
                     {
                         projects.map((project, index) => (
                             <div key={index} className="project card border rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
@@ -60,7 +60,7 @@ function Projects() {
                                 </a>
                             </div>
                         ))
-                    }
+                    } */}
                 </div>
             </div>
         </>

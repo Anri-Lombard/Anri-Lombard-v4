@@ -65,14 +65,14 @@ function Navbar() {
                             <Link href="/learning">Learning</Link>
                         </li>
                         <li className={router.pathname === "/projects" ? "navbar-item active" : "navbar-item"}>
-                            <Link href="/projects">Projects</Link>
+                            <Link href="/projects">Fun</Link>
                         </li>
                         <li className={router.pathname === "/contact" ? "navbar-item active" : "navbar-item"}>
                             <Link href="/contact">Contact</Link>
                         </li>
-                        <li className={router.pathname === "/blog" ? "navbar-item active" : "navbar-item"}>
+                        {/* <li className={router.pathname === "/blog" ? "navbar-item active" : "navbar-item"}>
                             <Link href="https://anri-lombard.github.io/">Blog</Link>
-                        </li>
+                        </li> */}
                         <li className="mx-auto p-2 md:p-0 md:mx-0 cursor-pointer hover:opacity-50">
                             <Link href="https://github.com/Anri-Lombard">
                                 <FontAwesomeIcon icon={faGithub} />
@@ -83,11 +83,6 @@ function Navbar() {
                                 <FontAwesomeIcon icon={faLinkedin} />
                             </Link>
                         </li>
-                        {/* <li className="cursor-pointer hover:opacity-50">
-                            <Link href="https://www.linkedin.com/in/anri-lombard-ab37ab201/">
-                                <FontAwesomeIcon icon={faCircleHalfStroke} />
-                            </Link>
-                        </li> */}
                     </ul>
                 </div>
             </div>

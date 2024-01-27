@@ -100,9 +100,18 @@ a {
         rgba(255, 0, 120, 1) 100%);
     animation: AnimateBG 20s ease infinite;
     font-family: 'Suez One', serif;
-
-    @apply self-center text-center p-32 bg-sky-300 w-screen lg:text-7xl text-white text-5xl
+  
+    /* Adjusted Styles */
+    padding: 4rem; /* Reduced padding */
+    border-radius: 60%; /* Makes it oval or circular */
+    width: fit-content; /* Adjust width to content */
+    max-width: 90%; /* Prevents it from being too wide */
+    margin: auto; /* Center it horizontally */
+  
+    /* Tailwind Classes */
+    @apply text-center bg-sky-300 text-white text-5xl lg:text-7xl;
   }
+  
 
 
   @keyframes AnimateBG {
