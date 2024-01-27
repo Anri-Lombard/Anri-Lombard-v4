@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "image": "NLP",
+        "title": "NLP Specialisation by DeepLearning.AI",
+        "topic": "Natural Language Processing",
+        "description": "Successfully completed the NLP Specialisation on Coursera by DeepLearning.AI, covering a wide range of topics, such as sentiment analysis, sequence modeling, machine translation, named entity recognition, and text classification. Key projects include: Sentiment Analysis of IMDB Reviews, Named Entity Recognition, Text Classification, Machine Translation, Question Answering using Transformers, Building a Chatbot",
+        "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/U5BW53ZZNWCU"
+    },
+    {
+        "id": 2,
+        "image": "DeepLearningImage",
+        "title": "Deep Learning Specialisation by DeepLearning.AI",
+        "topic": "Deep Learning",
+        "description": "Accomplished the Deep Learning Specialisation on Coursera by DeepLearning.AI, which encompassed various deep learning topics like convolutional neural networks, recurrent neural networks, Generative Adversarial Networks, transfer learning, and deep reinforcement learning. Key projects include: Digit Recognition using Convolutional Neural Networks, Language Translation using Recurrent Neural Networks, Generating New Images using Generative Adversarial Networks, Using Transfer Learning for Image Recognition, Building a Deep Reinforcement Learning Agent",
+        "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/N3RKPLZN6H2S"
+    },
+    {
+        "id": 3,
+        "image": "GANS",
+        "title": "GANS Specialisation by DeepLearning.AI",
+        "topic": "Generative Adversarial Networks",
+        "description": "Completed the GANS Specialisation on Coursera by DeepLearning.AI, which delved into various aspects of Generative Adversarial Networks, including generative models, adversarial loss, cycle consistency loss, multi-player GANs, and Wasserstein GANs. Key projects include: Generating new images with Generative Adversarial Networks, Semi-Supervised Learning with GANs, Image-to-Image Translation with Cycle Consistency Loss, Multi-Player GANs for generating new data distributions, Wasserstein GANs for improved stability and performance",
+        "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/PT2AYCUE3XDY"
+    },
+    {
+        "id": 4,
+        "image": "AIMed",
+        "title": "AI for Medicine Specialisation by DeepLearning.AI",
+        "topic": "Artificial Intelligence for Medicine",
+        "description": "Completed the Medical AI Specialisation on Coursera by DeepLearning.AI. This specialisation covered various topics in medical image analysis, from image segmentation, image classification, object detection to building end-to-end medical imaging workflows. The following are some of the projects completed as part of the specialisation: Automated Lung Cancer Screening with Chest X-rays, Skin Lesion Analysis for Melanoma Detection, Brain Tumor Segmentation with MRI Scans, Building a Pneumonia Detection System using Chest X-rays, Multi-modal Brain Tumor Segmentation with MRI and Histology Images",
+        "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/PYFZ5YHDR48V"
+    },
+    {
+        "id": 5,
+        "image": "MachineLearning",
+        "title": "Machine Learning Specialisation by DeepLearning.AI and Stanford University",
+        "topic": "Machine Learning",
+        "description": "Completed the Machine Learning Specialisation on Coursera by DeepLearning.AI and Stanford. This specialisation covered various topics in Supervised and Unsupervised Learning, including linear regression, logistic regression, clustering, dimensionality reduction, and deep learning. The following are some of the projects completed as part of the specialisation: Predicting Housing Prices with Linear Regression, Classifying Handwritten Digits with Logistic Regression, Clustering Customer Segments with K-Means, Reducing Data Dimensions with PCA, Building a Handwritten Digit Recognition System with Deep Learning",
+        "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/A8QJ9M8LQ3Z8"
+    },
+    {
+        "id": 6,
+        "image": "MLOps",
+        "title": "MLOps Specialisation by DeepLearning.AI",
+        "topic": "Machine Learning Engineering for Production",
+        "description": "Completed the MLOps Specialisation on Coursera by DeepLearning.AI. This specialisation covered various topics in Machine Learning Engineering for Production, from model deployment, CI/CD pipeline, monitoring, and scaling to disaster recovery. The following are some of the projects completed as part of the specialisation: Deploying Machine Learning Models on a Cloud Infrastructure, Building a Continuous Integration and Continuous Deployment pipeline for ML models, Monitoring and Debugging ML Models in Production, Scaling ML Models for High Traffic Applications, Implementing Disaster Recovery for ML models",
+        "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/FP2F6K9ZRB2L"
+    },
+    {
+        "id": 7,
+        "image": "DataScience",
+        "title": "Data Science Project for IBM Skills Network Specialisation",
+        "topic": "Data Science and Machine Learning",
+        "description": "Completed a project as part of the IBM Data Science Specialisation by IBM Skills Network on Coursera. The project involved using data science and machine learning techniques to solve a real-world business problem. The following were the steps involved: Data collection and preprocessing from various sources, Exploratory Data Analysis to understand the data and relationships between variables, Feature Engineering to create new variables that are meaningful for the problem, Model selection and training using various algorithms such as Linear Regression, Random Forest and Gradient Boosting, Model evaluation and hyperparameter tuning to improve performance",
+        "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/CJ52WZ2MR8B7"
+    },
+    {
+        "id": 8,
+        "image": "AIForGood",
+        "title": "AI for Good Specialisation by DeepLearning.AI",
+        "topic": "Artificial Intelligence",
+        "description": "Completed the AI for Good Specialisation on Coursera by DeepLearning.AI. This specialisation focused on the role of AI in addressing complex challenges and how to combine human and machine intelligence for positive real-world impact. The course provided insights into how AI can be leveraged for societal good and covered various real-world applications of AI. Key learnings include understanding the ethical implications of AI, exploring AI use cases for social good, and developing AI solutions that can positively impact society.",
+        "link": "https://www.coursera.org/account/accomplishments/specialization/certificate/W43YY9EHSFWB"
+    }    
+]
