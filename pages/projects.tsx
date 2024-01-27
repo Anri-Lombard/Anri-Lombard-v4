@@ -1,70 +1,173 @@
-import Image from 'next/image';
-import DeepLearningImage from '../public/images/DeepLearning.png';
-import NLP from '../public/images/NLP.jpeg';
-import GANS from '../public/images/GANS.png';
-import AIMed from '../public/images/AIMed.jpeg';
-import MachineLearning from '../public/images/MachineLearning.jpeg';
-import MLOps from '../public/images/MLOps.png';
-import DataScience from '../public/images/DataScience.jpeg';
-import AIForGood from '../public/images/AIForGood.jpeg';
+import { useEffect, useRef, useState, ChangeEvent } from "react";
+import Head from "next/head";
+import anime from "animejs";
+// import * as tf from "@tensorflow/tfjs";
 
-import projects from '../database/projects.json';
+// type Model = tf.LayersModel;
 
-import Head from 'next/head';
+// interface ClassificationResult {
+//   label: string;
+//   confidence: string;
+// }
+
+// interface ImageUploadProps {
+//   onUpload: (file: File) => void;
+// }
+
+// interface DisplayResultsProps {
+//   results: ClassificationResult[];
+//   imageSrc: string;
+// }
+
+// const loadModel = async (): Promise<Model> => {
+//   const model = await tf.loadLayersModel(
+//     "https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json"
+//   );
+//   return model;
+// };
+
+// const ImageUpload = ({ onUpload }: ImageUploadProps) => {
+//   const handleImageChange = (event: ChangeEvent<HTMLInputElement>) => {
+//     if (event.target.files && event.target.files.length > 0) {
+//       const file = event.target.files[0];
+//       onUpload(file);
+//     }
+//   };
+
+//   return <input type="file" accept="image/*" onChange={handleImageChange} />;
+// };
+
+// const classifyImage = async (
+//   model: Model,
+//   imageElement: HTMLImageElement
+// ): Promise<ClassificationResult[]> => {
+//   const tensor = tf.browser
+//     .fromPixels(imageElement)
+//     .resizeNearestNeighbor([224, 224])
+//     .toFloat()
+//     .expandDims();
+//   const predictions = (await model.predict(tensor)) as tf.Tensor<tf.Rank>;
+//   return Array.from(predictions.dataSync()).map((value, index) => ({
+//     label: `Class ${index + 1}`,
+//     confidence: value.toFixed(3),
+//   }));
+// };
+
+// const DisplayResults = ({ results, imageSrc }: DisplayResultsProps) => {
+//   // Find the result with the highest confidence
+//   const highestConfidenceResult = results.reduce((prev, current) => {
+//     return prev.confidence > current.confidence ? prev : current;
+//   });
+
+//   console.log(highestConfidenceResult);
+
+//   return (
+//     <div className="results-container flex">
+//       <img src={imageSrc} alt="Uploaded" className="w-48 h-48 object-contain" />
+//       <div>
+//         <p>{`Highest Confidence Prediction: ${highestConfidenceResult.label} with confidence ${highestConfidenceResult.confidence}`}</p>
+//       </div>
+//     </div>
+//   );
+// };
 
 function Projects() {
-    // Map string values to actual images
-    const images: any = {
-        DeepLearningImage,
-        NLP,
-        GANS,
-        AIMed,
-        MachineLearning,
-        MLOps,
-        DataScience,
-        AIForGood
+  const funRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  // const [model, setModel] = useState<Model | null>(null);
+  // const [results, setResults] = useState<ClassificationResult[]>([]);
+  // const [imageSrc, setImageSrc] = useState<string | null>(null);
+
+  // useEffect(() => {
+  //   loadModel().then(setModel).catch(console.error);
+  // }, []);
+
+  // const handleImageUpload = async (file: File) => {
+  //   const reader = new FileReader();
+  //   reader.onload = async (e: ProgressEvent<FileReader>) => {
+  //     if (e.target?.result) {
+  //       setImageSrc(e.target.result as string);
+  //       const img = new Image();
+  //       img.src = e.target.result as string;
+  //       img.onload = async () => {
+  //         try {
+  //           const classificationResults = await classifyImage(model!, img);
+  //           setResults(classificationResults);
+  //         } catch (error) {
+  //           console.error("Error in classification:", error);
+  //         }
+  //       };
+  //       img.onerror = () => console.error("Error loading image");
+  //     }
+  //   };
+  //   reader.readAsDataURL(file);
+  // };
+
+  useEffect(() => {
+    // Function to move the bubble away from the mouse pointer
+    const avoidMouse = (event: MouseEvent) => {
+      if (funRef.current && containerRef.current) {
+        const bubble = funRef.current;
+
+        // Get the mouse position relative to the page
+        const mouseX = event.pageX;
+        const mouseY = event.pageY;
+
+        // Get the position and dimensions of the bubble
+        const bubbleRect = bubble.getBoundingClientRect();
+        const bubbleX = bubbleRect.left + window.scrollX + bubbleRect.width / 2;
+        const bubbleY = bubbleRect.top + window.scrollY + bubbleRect.height / 2;
+
+        // Calculate the distance from the center of the bubble to the mouse
+        const distanceX = mouseX - bubbleX;
+        const distanceY = mouseY - bubbleY;
+
+        // Determine the new position, with a max distance constraint
+        const maxDistance = 200; // Increased max distance to move the bubble
+        const avoidanceFactor = 20; // Increased for more "avoidance"
+        let translateX = (distanceX > 0 ? -1 : 1) * maxDistance;
+        let translateY = (distanceY > 0 ? -1 : 1) * maxDistance;
+
+        // Apply the transformation with anime.js
+        anime({
+          targets: bubble,
+          translateX: translateX,
+          translateY: translateY,
+          duration: 200, // Reduced duration for faster movement
+          easing: "easeOutQuad",
+        });
+      }
     };
 
-    return (
-        <>
-            <Head>
-                <title>Anri Lombard - Projects</title>
-                <meta name="description" content="Built projects and open source contributions" />
-            </Head>
-            <div className="min-h-screen flex flex-col mx-10">
-                <div className="page-intro">
-                    Projects
-                </div>
+    // Add mouse move event listener to the container
+    document.addEventListener("mousemove", avoidMouse);
 
-                <div className="box-container md:m-10 mt-10 grid md:grid-cols-2 gap-4">
-                    <h4 className="heading_2 col-span-full">I am mostly interested in machine learning, although web and game development are fun hobbies I will sometimes delve into</h4>
-                    {
-                        projects.map((project, index) => (
-                            <div key={index} className="project card border rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-                                <a href={project.link} target="_blank" rel="noreferrer">
-                                    <div className="flex flex-col">
+    // Cleanup event listener
+    return () => {
+      document.removeEventListener("mousemove", avoidMouse);
+    };
+  }, []);
 
-                                        <div className="flex justify-center items-center">
-                                            <Image src={images[project.image]} alt={`Picture of ${project.title}`} width={500} height={300} className="adaptive-image rounded-sm" />
-                                        </div>
+  return (
+    <>
+      <Head>
+        <title>Anri Lombard - Fun</title>
+        <meta
+          name="description"
+          content="Built projects and open source contributions"
+        />
+      </Head>
+      <div className="min-h-screen flex flex-col mx-10" ref={containerRef}>
+        <div className="page-intro m-auto" ref={funRef}>
+          Fun
+        </div>
 
-                                        <div className="flex-2 p-5">
-                                            <div className="flex-auto flex-grow text-xl font-extrabold hover:text-primary transition duration-250 ease-out">
-                                                {project.title}
-                                            </div>
-                                            <div className="flex-auto text-sm font-thin">{project.topic}</div>
-                                            <div className="pt-5" dangerouslySetInnerHTML={{ __html: project.description }}></div>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
-        </>
-    )
+        <div className="box-container md:m-10 mt-10 grid md:grid-cols-2 gap-4">
+          {/* Here to add ml projects */}
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Projects;
