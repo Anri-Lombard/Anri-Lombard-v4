@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
-import { TypeAnimation } from 'react-type-animation';
+import type { NextPage } from "next";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import { TypeAnimation } from "react-type-animation";
 
 const Home: NextPage = () => {
   return (
@@ -101,11 +101,11 @@ const Home: NextPage = () => {
               "Bye 😊",
               10000,
               "",
-              9999999999
+              9999999999,
             ]}
             wrapper="span"
             speed={50}
-            style={{ fontSize: '2em', display: 'inline-block' }}
+            style={{ fontSize: "2em", display: "inline-block" }}
             repeat={Infinity}
           />
         </div>
@@ -126,16 +126,27 @@ const Home: NextPage = () => {
             <Link href="https://anri-lombard.github.io/">💬 Read his thoughts</Link>
           </div> */}
           <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#c7d2fe] text-[#1e40af] p-4 rounded-md text-center cursor-pointer">
-            <a href="https://github.com/Anri-Lombard" target="_blank" rel="noopener noreferrer">📁 View his GitHub</a>
+            <a
+              href="https://github.com/Anri-Lombard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📁 View his GitHub
+            </a>
           </div>
           <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#e0e7ff] text-[#1d4ed8] p-4 rounded-md text-center cursor-pointer">
-            <a href="https://www.linkedin.com/in/anri-lombard-ab37ab201/" target="_blank" rel="noopener noreferrer">🔗 Connect on LinkedIn</a>
+            <a
+              href="https://www.linkedin.com/in/anri-lombard-ab37ab201/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🔗 Connect on LinkedIn
+            </a>
           </div>
-
         </div>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
