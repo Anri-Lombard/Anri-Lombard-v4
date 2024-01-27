@@ -105,7 +105,7 @@ function Projects() {
 
   useEffect(() => {
     // Function to move the bubble away from the mouse pointer
-    const avoidMouse = (event) => {
+    const avoidMouse = (event: MouseEvent) => {
       if (funRef.current && containerRef.current) {
         const bubble = funRef.current;
 
