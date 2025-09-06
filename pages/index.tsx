@@ -2,15 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 import PersonalIMG from "../public/images/personal.png";
-import Timeline from "../components/Timeline";
-import type { TimelineEntry } from "../components/TimelineItem";
+import TimelineScaled, { ScaledEntry } from "../components/TimelineScaled";
 
 const IndexPage = () => {
-  const timeline: TimelineEntry[] = [
+  const timeline: ScaledEntry[] = [
     {
       kind: "point",
       side: "left",
-      label: "2002",
+      date: "2002-06",
       title: "Born in Namibia",
       description: "Windhoek, Namibia.",
       color: "amber",
@@ -18,7 +17,7 @@ const IndexPage = () => {
     {
       kind: "point",
       side: "right",
-      label: "2020",
+      date: "2020-12",
       title: "Matric — Windhoek High School",
       description:
         "Graduated and moved to Cape Town to study at the University of Cape Town.",
@@ -27,7 +26,7 @@ const IndexPage = () => {
     {
       kind: "point",
       side: "left",
-      label: "2023",
+      date: "2023-12",
       title: "BSc — UCT",
       description:
         "Bachelor's in Computer Science and Mathematical Statistics.",
@@ -36,7 +35,7 @@ const IndexPage = () => {
     {
       kind: "point",
       side: "right",
-      label: "2024",
+      date: "2024-12",
       title: "BSc (Hons) — UCT",
       description: "Honours in Computer Science.",
       color: "violet",
@@ -44,7 +43,7 @@ const IndexPage = () => {
     {
       kind: "range",
       side: "left",
-      start: "2025",
+      start: "2025-02",
       end: "Present",
       title: "MSc (AI) — UCT",
       description:
@@ -54,7 +53,7 @@ const IndexPage = () => {
     {
       kind: "point",
       side: "right",
-      label: "2025",
+      date: "2025-03",
       title: "Applied for SA Citizenship",
       description: "Through descent.",
       color: "rose",
@@ -62,7 +61,7 @@ const IndexPage = () => {
     {
       kind: "point",
       side: "left",
-      label: "Jul 2022",
+      date: "2022-07",
       title: "SDE Intern — SprintHive",
       description: "First internship experience.",
       color: "sky",
@@ -70,8 +69,8 @@ const IndexPage = () => {
     {
       kind: "range",
       side: "right",
-      start: "Nov 2023",
-      end: "Feb 2024",
+      start: "2023-11",
+      end: "2024-02",
       title: "SDE Intern — SprintHive",
       description: "Second internship.",
       color: "sky",
@@ -79,8 +78,8 @@ const IndexPage = () => {
     {
       kind: "range",
       side: "left",
-      start: "Aug 2023",
-      end: "Jan 2024",
+      start: "2023-08",
+      end: "2024-01",
       title: "Coding Mentor — HyperionDev",
       description: "Mentored aspiring developers.",
       color: "indigo",
@@ -88,8 +87,8 @@ const IndexPage = () => {
     {
       kind: "range",
       side: "right",
-      start: "Feb 2024",
-      end: "Jul 2024",
+      start: "2024-02",
+      end: "2024-07",
       title: "Data Science Lecturer — HyperionDev",
       description: "Taught data science modules.",
       color: "violet",
@@ -97,8 +96,8 @@ const IndexPage = () => {
     {
       kind: "range",
       side: "left",
-      start: "May 2024",
-      end: "Oct 2024",
+      start: "2024-05",
+      end: "2024-10",
       title: "Part-time — SprintHive",
       description: "Continued part-time work.",
       color: "emerald",
@@ -106,7 +105,7 @@ const IndexPage = () => {
     {
       kind: "range",
       side: "right",
-      start: "Nov 2024",
+      start: "2024-11",
       end: "Present",
       title: "SDE — SprintHive",
       description: "Full-time software engineer.",
@@ -115,8 +114,8 @@ const IndexPage = () => {
     {
       kind: "range",
       side: "left",
-      start: "2025",
-      end: "End 2026",
+      start: "2025-01",
+      end: "2026-12",
       title: "Coming Soon",
       description:
         "South African citizenship by descent and graduating Master's in AI.",
@@ -170,7 +169,7 @@ const IndexPage = () => {
       {/* Timeline */}
       <section className="px-6 py-20 md:py-28 bg-white">
         <h3 className="text-2xl md:text-3xl font-semibold text-center">Timeline</h3>
-        <Timeline entries={timeline} />
+        <TimelineScaled entries={timeline} />
       </section>
     </>
   );
