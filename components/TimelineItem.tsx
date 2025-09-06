@@ -70,59 +70,47 @@ export default function TimelineItem({ entry }: Props) {
   return (
     <li
       ref={ref}
-      className={`transition-all duration-700 ease-out opacity-0 translate-y-6 ${
+      className={`relative transition-all duration-700 ease-out opacity-0 translate-y-6 ${
         inView ? "opacity-100 translate-y-0" : ""
       }`}
     >
+      {/* Marker (dot or range bar) centered on the spine */}
+      {entry.kind === "point" ? (
+        <span
+          className={`absolute left-1/2 -translate-x-1/2 top-6 w-3 h-3 ${dotColor} rounded-full ring-4 ring-white ${ringColor} shadow`}
+        />
+      ) : (
+        <div
+          className={`absolute left-1/2 -translate-x-1/2 top-2 md:top-3 w-1 ${dotColor} rounded`}
+          style={{ height: "64px" }}
+        />
+      )}
+
+      {/* Date label on the spine (not in the card) */}
       <div
-        className={`relative md:grid md:grid-cols-2 md:gap-8 items-start ${
-          isLeft ? "md:text-right" : ""
+        className={`hidden md:block absolute top-0 text-xs uppercase tracking-wide text-gray-500 ${
+          isLeft ? "left-1/2 pl-3" : "right-1/2 pr-3 text-right"
         }`}
       >
-        {/* Left column (for left-side items, content on left; for right-side items, empty placeholder) */}
-        <div className={`${isLeft ? "order-1" : "order-2"} hidden md:block`} />
+        {entry.kind === "point" ? entry.label : `${entry.start} — ${entry.end}`}
+      </div>
 
-        {/* Marker column (center spine + marker) */}
-        <div className="relative order-1 md:order-none">
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-200" />
+      {/* Connector from spine to card */}
+      <span
+        className={`hidden md:block absolute top-6 h-0.5 w-8 ${dotColor} ${
+          isLeft ? "right-1/2" : "left-1/2"
+        }`}
+      />
 
-          {/* Marker or range bar */}
-          {entry.kind === "point" ? (
-            <span
-              className={`absolute left-1/2 -translate-x-1/2 -mt-1.5 w-3 h-3 ${dotColor} rounded-full ring-4 ring-white ${ringColor} shadow`}
-            />
-          ) : (
-            <div
-              className={`absolute left-1/2 -translate-x-1/2 w-1 ${dotColor} rounded`}
-              style={{ top: "-0.5rem", bottom: "-0.5rem" }}
-            />
-          )}
-        </div>
-
-        {/* Content card */}
+      {/* Content layout: two columns on md, card on alternating side */}
+      <div className="md:grid md:grid-cols-2 md:gap-8 items-start">
         <div
-          className={`${
-            isLeft ? "md:order-none" : "md:order-2"
-          } relative mt-6 md:mt-0`}
+          className={`mt-10 md:mt-0 ${
+            isLeft ? "md:col-start-1 md:justify-self-end" : "md:col-start-2 md:justify-self-start"
+          }`}
         >
-          {/* Connector from spine to card */}
-          <span
-            className={`hidden md:block absolute top-6 h-0.5 w-6 ${dotColor} ${
-              isLeft ? "right-full" : "left-full"
-            }`}
-          />
-
-          <div className="p-5 rounded-lg border border-gray-100 shadow-sm bg-white">
-            <div className="text-xs md:text-sm uppercase tracking-wide text-gray-600 font-semibold">
-              {entry.kind === "point" ? (
-                <>{entry.label}</>
-              ) : (
-                <>
-                  {entry.start} — {entry.end}
-                </>
-              )}
-            </div>
-            <div className="mt-1 font-medium text-gray-800">{entry.title}</div>
+          <div className="max-w-xl p-5 rounded-lg border border-gray-100 shadow-sm bg-white">
+            <div className="font-medium text-gray-800">{entry.title}</div>
             <div className="mt-1 text-gray-600 text-sm">{entry.description}</div>
           </div>
         </div>
@@ -130,4 +118,3 @@ export default function TimelineItem({ entry }: Props) {
     </li>
   );
 }
-
