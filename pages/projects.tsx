@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, ChangeEvent } from "react";
 import Head from "next/head";
-import anime from "animejs";
+// AnimeJS v4 exposes named exports
+import { animate } from "animejs";
 // import * as tf from "@tensorflow/tfjs";
 
 // type Model = tf.LayersModel;
@@ -74,6 +75,7 @@ import anime from "animejs";
 function Projects() {
   const funRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [navHeight, setNavHeight] = useState(0);
   // const [model, setModel] = useState<Model | null>(null);
   // const [results, setResults] = useState<ClassificationResult[]>([]);
   // const [imageSrc, setImageSrc] = useState<string | null>(null);
@@ -104,6 +106,14 @@ function Projects() {
   // };
 
   useEffect(() => {
+    // Measure navbar height so content starts below it
+    const computeNavHeight = () => {
+      const nav = document.getElementById("nav-holder");
+      if (nav) setNavHeight(nav.offsetHeight);
+    };
+    computeNavHeight();
+    window.addEventListener("resize", computeNavHeight);
+
     // Function to move the bubble away from the mouse pointer
     const avoidMouse = (event: MouseEvent) => {
       if (funRef.current && containerRef.current) {
@@ -123,14 +133,13 @@ function Projects() {
         const distanceY = mouseY - bubbleY;
 
         // Determine the new position, with a max distance constraint
-        const maxDistance = 200; // Increased max distance to move the bubble
-        const avoidanceFactor = 20; // Increased for more "avoidance"
+        const maxDistance = 120; // Reduce movement to keep bubble on screen
+        const avoidanceFactor = 16; // Slightly toned down
         let translateX = (distanceX > 0 ? -1 : 1) * maxDistance;
         let translateY = (distanceY > 0 ? -1 : 1) * maxDistance;
 
-        // Apply the transformation with anime.js
-        anime({
-          targets: bubble,
+        // Apply the transformation with anime.js v4 API
+        animate(bubble, {
           translateX: translateX,
           translateY: translateY,
           duration: 200, // Reduced duration for faster movement
@@ -145,6 +154,7 @@ function Projects() {
     // Cleanup event listener
     return () => {
       document.removeEventListener("mousemove", avoidMouse);
+      window.removeEventListener("resize", computeNavHeight);
     };
   }, []);
 
@@ -157,8 +167,12 @@ function Projects() {
           content="Built projects and open source contributions"
         />
       </Head>
-      <div className="min-h-screen flex flex-col mx-10" ref={containerRef}>
-        <div className="page-intro m-auto" ref={funRef}>
+      <div
+        className="flex flex-col mx-10"
+        ref={containerRef}
+        style={{ paddingTop: navHeight ? navHeight + 16 : undefined }}
+      >
+        <div className="page-intro self-center mt-6" ref={funRef}>
           Fun
         </div>
 

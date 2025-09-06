@@ -7,7 +7,7 @@ function Contact() {
         <title>Anri Lombard - Contact</title>
         <meta name="description" content="Contact information" />
       </Head>
-      <div className="min-h-screen flex flex-col mx-10">
+      <div className="flex flex-col mx-10">
         <div className="page-intro">Contact</div>
         <div className="contact max-w-2xl mt-10">
           <p className="mb-5">

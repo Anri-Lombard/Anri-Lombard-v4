@@ -8,11 +8,13 @@ config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatic
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <Component {...pageProps} />
+      <main className="flex-1">
+        <Component {...pageProps} />
+      </main>
       <Footer />
-    </>
+    </div>
   )
 }
 

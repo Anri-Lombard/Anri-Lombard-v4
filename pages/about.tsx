@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AnriIMG from "../public/images/Anri.png";
+import PersonalIMG from "../public/images/personal.png";
 import Head from "next/head";
 import React from "react";
 
@@ -13,11 +13,11 @@ function About() {
           content="Personal information and introduction"
         />
       </Head>
-      <div className="min-h-screen flex flex-col mx-10">
+      <div className="flex flex-col mx-10">
         <div className="page-intro">About</div>
         <div className="mt-10 flex-auto w-full lg:w-1/2 xl:w-1/3 border-solid border-2 border-[#e0f2fe] rounded-sm self-center">
           <Image
-            src={AnriIMG}
+            src={PersonalIMG}
             alt="Profile Picture"
             layout="responsive"
             width={640}
