@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, ChangeEvent } from "react";
 import Head from "next/head";
-import anime from "animejs";
+// AnimeJS v4 exposes named exports
+import { animate } from "animejs";
 // import * as tf from "@tensorflow/tfjs";
 
 // type Model = tf.LayersModel;
@@ -128,9 +129,8 @@ function Projects() {
         let translateX = (distanceX > 0 ? -1 : 1) * maxDistance;
         let translateY = (distanceY > 0 ? -1 : 1) * maxDistance;
 
-        // Apply the transformation with anime.js
-        anime({
-          targets: bubble,
+        // Apply the transformation with anime.js v4 API
+        animate(bubble, {
           translateX: translateX,
           translateY: translateY,
           duration: 200, // Reduced duration for faster movement
