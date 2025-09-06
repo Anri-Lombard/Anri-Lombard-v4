@@ -75,6 +75,7 @@ import { animate } from "animejs";
 function Projects() {
   const funRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [navHeight, setNavHeight] = useState(0);
   // const [model, setModel] = useState<Model | null>(null);
   // const [results, setResults] = useState<ClassificationResult[]>([]);
   // const [imageSrc, setImageSrc] = useState<string | null>(null);
@@ -105,6 +106,14 @@ function Projects() {
   // };
 
   useEffect(() => {
+    // Measure navbar height so content starts below it
+    const computeNavHeight = () => {
+      const nav = document.getElementById("nav-holder");
+      if (nav) setNavHeight(nav.offsetHeight);
+    };
+    computeNavHeight();
+    window.addEventListener("resize", computeNavHeight);
+
     // Function to move the bubble away from the mouse pointer
     const avoidMouse = (event: MouseEvent) => {
       if (funRef.current && containerRef.current) {
@@ -145,6 +154,7 @@ function Projects() {
     // Cleanup event listener
     return () => {
       document.removeEventListener("mousemove", avoidMouse);
+      window.removeEventListener("resize", computeNavHeight);
     };
   }, []);
 
@@ -157,8 +167,12 @@ function Projects() {
           content="Built projects and open source contributions"
         />
       </Head>
-      <div className="flex flex-col mx-10" ref={containerRef}>
-        <div className="page-intro m-auto" ref={funRef}>
+      <div
+        className="flex flex-col mx-10"
+        ref={containerRef}
+        style={{ paddingTop: navHeight ? navHeight + 16 : undefined }}
+      >
+        <div className="page-intro self-center mt-6" ref={funRef}>
           Fun
         </div>
 
