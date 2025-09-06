@@ -45,7 +45,7 @@ function Navbar() {
         className="container flex flex-col justify-between items-center mx-auto p-7 ease-in duration-300"
       >
         <div className="cursor-pointer mb-5">
-          <Link href="/">
+          <Link href="/about">
             <span className="flex items-center self-center text-xl font-semibold whitespace-nowrap dark:text-white">
               Anri Lombard
             </span>
@@ -53,41 +53,8 @@ function Navbar() {
         </div>
         <div className="w-full md:block md:w-auto" id="navbar-default">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium text-center">
-            <li
-              className={
-                router.pathname === "/about"
-                  ? "navbar-item active"
-                  : "navbar-item"
-              }
-            >
+            <li className={router.pathname === "/about" ? "navbar-item active" : "navbar-item"}>
               <Link href="/about">About</Link>
-            </li>
-            <li
-              className={
-                router.pathname === "/learning"
-                  ? "navbar-item active"
-                  : "navbar-item"
-              }
-            >
-              <Link href="/learning">Learning</Link>
-            </li>
-            <li
-              className={
-                router.pathname === "/projects"
-                  ? "navbar-item active"
-                  : "navbar-item"
-              }
-            >
-              <Link href="/projects">Fun</Link>
-            </li>
-            <li
-              className={
-                router.pathname === "/contact"
-                  ? "navbar-item active"
-                  : "navbar-item"
-              }
-            >
-              <Link href="/contact">Contact</Link>
             </li>
             {/* <li className={router.pathname === "/blog" ? "navbar-item active" : "navbar-item"}>
                             <Link href="https://anri-lombard.github.io/">Blog</Link>
