@@ -32,8 +32,32 @@ function Navbar() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
+    // Hide the header when the hero section is in view
+    const hero = document.getElementById("hero");
+    const navHolder = document.getElementById("nav-holder");
+    if (hero && navHolder && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navHolder.classList.add("hidden");
+            } else {
+              navHolder.classList.remove("hidden");
+            }
+          });
+        },
+        { threshold: 0.6 }
+      );
+      observer.observe(hero);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+        observer.disconnect();
+      };
+    }
+
     return () => window.removeEventListener("scroll", handleScroll);
-  });
+  }, []);
 
   return (
     <nav
@@ -45,7 +69,7 @@ function Navbar() {
         className="container flex flex-col justify-between items-center mx-auto p-7 ease-in duration-300"
       >
         <div className="cursor-pointer mb-5">
-          <Link href="/about">
+          <Link href="/">
             <span className="flex items-center self-center text-xl font-semibold whitespace-nowrap dark:text-white">
               Anri Lombard
             </span>
@@ -53,9 +77,7 @@ function Navbar() {
         </div>
         <div className="w-full md:block md:w-auto" id="navbar-default">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium text-center">
-            <li className={router.pathname === "/about" ? "navbar-item active" : "navbar-item"}>
-              <Link href="/about">About</Link>
-            </li>
+            {/* Single page site – no section links for now */}
             {/* <li className={router.pathname === "/blog" ? "navbar-item active" : "navbar-item"}>
                             <Link href="https://anri-lombard.github.io/">Blog</Link>
                         </li> */}
