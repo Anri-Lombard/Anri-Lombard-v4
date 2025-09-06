@@ -3,8 +3,9 @@
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
+  /* Let the app layout control full height; avoid forcing scroll */
+  min-height: auto;
+  padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;

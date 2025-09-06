@@ -100,8 +100,8 @@ a {
     font-family: "Suez One", serif;
 
     /* Adjusted Styles */
-    padding: 4rem; /* Reduced padding */
-    border-radius: 60%; /* Makes it oval or circular */
+    padding: 2rem; /* Smaller padding to fit viewport */
+    border-radius: 60%; /* Keeps oval/circular look */
     width: fit-content; /* Adjust width to content */
     max-width: 90%; /* Prevents it from being too wide */
 
@@ -109,7 +109,7 @@ a {
     margin-right: auto; /* Center it horizontally */
 
     /* Tailwind Classes */
-    @apply text-center bg-sky-300 text-white text-5xl lg:text-7xl;
+    @apply text-center bg-sky-300 text-white text-3xl md:text-4xl lg:text-5xl;
   }
 
   @keyframes AnimateBG {

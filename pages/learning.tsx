@@ -47,7 +47,7 @@ function Learning() {
           content="Learned information and subject interest"
         />
       </Head>
-      <div className="min-h-screen flex flex-col mx-10 font-sans">
+      <div className="flex flex-col mx-10 font-sans">
         <div className="page-intro">Learning</div>
         <h3 className="heading">Inside University</h3>
         <h4 className="heading_2">

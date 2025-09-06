@@ -124,8 +124,8 @@ function Projects() {
         const distanceY = mouseY - bubbleY;
 
         // Determine the new position, with a max distance constraint
-        const maxDistance = 200; // Increased max distance to move the bubble
-        const avoidanceFactor = 20; // Increased for more "avoidance"
+        const maxDistance = 120; // Reduce movement to keep bubble on screen
+        const avoidanceFactor = 16; // Slightly toned down
         let translateX = (distanceX > 0 ? -1 : 1) * maxDistance;
         let translateY = (distanceY > 0 ? -1 : 1) * maxDistance;
 
@@ -157,7 +157,7 @@ function Projects() {
           content="Built projects and open source contributions"
         />
       </Head>
-      <div className="min-h-screen flex flex-col mx-10" ref={containerRef}>
+      <div className="flex flex-col mx-10" ref={containerRef}>
         <div className="page-intro m-auto" ref={funRef}>
           Fun
         </div>
