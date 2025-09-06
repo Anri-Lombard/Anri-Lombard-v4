@@ -34,6 +34,11 @@ a {
   box-sizing: border-box;
 }
 
+/* Hide the typing cursor once a typed element is marked done */
+.typed-done + .typed-cursor {
+  display: none !important;
+}
+
 @layer components {
   /* --- Navbar ---  */
   .navbar {

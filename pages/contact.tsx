@@ -1,4 +1,7 @@
 import Head from "next/head";
+import { JetBrains_Mono } from "next/font/google";
+
+const jetbrains = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "700"] });
 
 function Contact() {
   return (
@@ -7,29 +10,15 @@ function Contact() {
         <title>Anri Lombard - Contact</title>
         <meta name="description" content="Contact information" />
       </Head>
-      <div className="flex flex-col mx-10">
-        <div className="contact max-w-2xl mt-10">
-          <p className="mb-5">
-            Hey there! When I&lsquo;m not doing Machine Learning or studying
-            Computer Science and Mathematical Statistics, I make sure to stay
-            connected.
+      <div className="flex flex-col mx-6 md:mx-10">
+        <div className="mt-10 mx-auto w-full max-w-2xl bg-black/40 backdrop-blur-sm rounded-2xl p-6 md:p-10 shadow-2xl ring-1 ring-white/10 mb-24 md:mb-32 text-center">
+          <p className={`${jetbrains.className} text-white text-xl md:text-2xl`}>
+            Personal email:
           </p>
-          <p className="mb-5">
-            So, if you want to discuss a project, share insights, or just chat
-            about coding and statistics, don&lsquo;t hesitate to reach out. Keep
-            in mind that I might take some days to respond.
-          </p>
-          <p>
-            My personal email address is{" "}
-            <strong>
-              <a
-                href="mailto:anri.m.lombard@gmail.com"
-                className="text-blue-600 hover:text-blue-800 transition duration-300"
-              >
-                anri.m.lombard@gmail.com
-              </a>
-            </strong>
-            .
+          <p className={`${jetbrains.className} text-white text-2xl md:text-3xl mt-3 font-semibold`}>
+            <a href="mailto:anri.m.lombard@gmail.com" className="underline decoration-white/60 hover:decoration-white transition">
+              anri.m.lombard@gmail.com
+            </a>
           </p>
         </div>
       </div>
