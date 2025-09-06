@@ -38,7 +38,7 @@ function Navbar() {
   return (
     <nav
       id="nav-holder"
-      className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 sticky top-0 left-0 right-0 z-10 ease-in duration-200"
+      className="bg-white/70 dark:bg-gray-900/60 backdrop-blur-md border-gray-200 px-2 sm:px-4 py-2.5 rounded sticky top-0 left-0 right-0 z-10 ease-in duration-200"
     >
       <div
         id="navbar"
@@ -62,24 +62,7 @@ function Navbar() {
             >
               <Link href="/about">About</Link>
             </li>
-            <li
-              className={
-                router.pathname === "/learning"
-                  ? "navbar-item active"
-                  : "navbar-item"
-              }
-            >
-              <Link href="/learning">Learning</Link>
-            </li>
-            <li
-              className={
-                router.pathname === "/projects"
-                  ? "navbar-item active"
-                  : "navbar-item"
-              }
-            >
-              <Link href="/projects">Fun</Link>
-            </li>
+            {/** Removed Learning and Fun links */}
             <li
               className={
                 router.pathname === "/contact"
