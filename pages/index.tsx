@@ -1,76 +1,126 @@
 import Head from "next/head";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import PersonalIMG from "../public/images/personal.png";
+import Timeline from "../components/Timeline";
+import type { TimelineEntry } from "../components/TimelineItem";
 
 const IndexPage = () => {
-  useEffect(() => {
-    // Simple intersection-based reveal for timeline items
-    const items = document.querySelectorAll<HTMLElement>(".reveal-on-scroll");
-    if (!("IntersectionObserver" in window)) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("opacity-100", "translate-x-0");
-            entry.target.classList.remove("opacity-0");
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    items.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
-  const timeline = [
-    { year: "2002", text: "Born in Namibia." },
+  const timeline: TimelineEntry[] = [
     {
-      year: "2020",
-      text:
-        "Graduated from Windhoek High School (Namibia) and moved to Cape Town to study at the University of Cape Town.",
+      kind: "point",
+      side: "left",
+      label: "2002",
+      title: "Born in Namibia",
+      description: "Windhoek, Namibia.",
+      color: "amber",
     },
     {
-      year: "2023",
-      text:
-        "Graduated with a Bachelor's in Computer Science and Mathematical Statistics (UCT).",
-    },
-    { year: "2024", text: "Graduated with Honours in Computer Science (UCT)." },
-    {
-      year: "2025",
-      text:
-        "Started a Master's in Artificial Intelligence (UCT) — ongoing. Applied for South African citizenship through descent.",
+      kind: "point",
+      side: "right",
+      label: "2020",
+      title: "Matric — Windhoek High School",
+      description:
+        "Graduated and moved to Cape Town to study at the University of Cape Town.",
+      color: "sky",
     },
     {
-      year: "Jul 2022",
-      text: "First Software Development Engineer Intern at SprintHive.",
+      kind: "point",
+      side: "left",
+      label: "2023",
+      title: "BSc — UCT",
+      description:
+        "Bachelor's in Computer Science and Mathematical Statistics.",
+      color: "indigo",
     },
     {
-      year: "Nov 2023 – Feb 2024",
-      text: "Second SDE internship at SprintHive.",
+      kind: "point",
+      side: "right",
+      label: "2024",
+      title: "BSc (Hons) — UCT",
+      description: "Honours in Computer Science.",
+      color: "violet",
     },
     {
-      year: "Aug 2023 – Jan 2024",
-      text: "Coding Mentor at HyperionDev.",
+      kind: "range",
+      side: "left",
+      start: "2025",
+      end: "Present",
+      title: "MSc (AI) — UCT",
+      description:
+        "Started a Master's in Artificial Intelligence. Ongoing research and study.",
+      color: "emerald",
     },
     {
-      year: "Feb 2024 – Jul 2024",
-      text: "Data Science Lecturer at HyperionDev.",
+      kind: "point",
+      side: "right",
+      label: "2025",
+      title: "Applied for SA Citizenship",
+      description: "Through descent.",
+      color: "rose",
     },
     {
-      year: "May 2024 – Oct 2024",
-      text: "Part-time software work at SprintHive.",
+      kind: "point",
+      side: "left",
+      label: "Jul 2022",
+      title: "SDE Intern — SprintHive",
+      description: "First internship experience.",
+      color: "sky",
     },
     {
-      year: "Nov 2024 – Present",
-      text: "Full-time Software Development Engineer at SprintHive.",
+      kind: "range",
+      side: "right",
+      start: "Nov 2023",
+      end: "Feb 2024",
+      title: "SDE Intern — SprintHive",
+      description: "Second internship.",
+      color: "sky",
     },
     {
-      year: "Coming Soon",
-      text:
-        "South African citizenship by descent and graduating Master\'s in AI (end of 2026).",
+      kind: "range",
+      side: "left",
+      start: "Aug 2023",
+      end: "Jan 2024",
+      title: "Coding Mentor — HyperionDev",
+      description: "Mentored aspiring developers.",
+      color: "indigo",
+    },
+    {
+      kind: "range",
+      side: "right",
+      start: "Feb 2024",
+      end: "Jul 2024",
+      title: "Data Science Lecturer — HyperionDev",
+      description: "Taught data science modules.",
+      color: "violet",
+    },
+    {
+      kind: "range",
+      side: "left",
+      start: "May 2024",
+      end: "Oct 2024",
+      title: "Part-time — SprintHive",
+      description: "Continued part-time work.",
+      color: "emerald",
+    },
+    {
+      kind: "range",
+      side: "right",
+      start: "Nov 2024",
+      end: "Present",
+      title: "SDE — SprintHive",
+      description: "Full-time software engineer.",
+      color: "sky",
+    },
+    {
+      kind: "range",
+      side: "left",
+      start: "2025",
+      end: "End 2026",
+      title: "Coming Soon",
+      description:
+        "South African citizenship by descent and graduating Master's in AI.",
+      color: "amber",
     },
   ];
 
@@ -120,36 +170,7 @@ const IndexPage = () => {
       {/* Timeline */}
       <section className="px-6 py-20 md:py-28 bg-white">
         <h3 className="text-2xl md:text-3xl font-semibold text-center">Timeline</h3>
-        <div className="mt-12 max-w-3xl mx-auto">
-          <div className="relative">
-            <div className="absolute left-4 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-gray-200" />
-            <ul className="space-y-10">
-              {timeline.map((item, idx) => (
-                <li
-                  key={idx}
-                  className={`reveal-on-scroll opacity-0 transform transition-all duration-700 ease-out ${
-                    idx % 2 === 0
-                      ? "md:translate-x-[-24px]"
-                      : "md:translate-x-[24px]"
-                  }`}
-                >
-                  <div className="relative pl-12 md:pl-0 md:flex md:items-center md:justify-between">
-                    {/* Marker */}
-                    <span className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-sky-500 rounded-full ring-4 ring-white shadow" />
-
-                    {/* Content */}
-                    <div className="md:w-[45%] p-5 rounded-lg border border-gray-100 shadow-sm bg-white">
-                      <div className="text-sm uppercase tracking-wide text-sky-700 font-semibold">
-                        {item.year}
-                      </div>
-                      <div className="mt-1 text-gray-700">{item.text}</div>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <Timeline entries={timeline} />
       </section>
     </>
   );
