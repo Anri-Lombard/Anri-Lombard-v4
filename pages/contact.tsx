@@ -8,7 +8,6 @@ function Contact() {
         <meta name="description" content="Contact information" />
       </Head>
       <div className="flex flex-col mx-10">
-        <div className="page-intro">Contact</div>
         <div className="contact max-w-2xl mt-10">
           <p className="mb-5">
             Hey there! When I&lsquo;m not doing Machine Learning or studying

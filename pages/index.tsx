@@ -113,12 +113,7 @@ const Home: NextPage = () => {
           <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#93c5fd] text-[#1e3a8a] p-4 rounded-md text-center cursor-pointer">
             <Link href="/about">🔍 Get to know Anri</Link>
           </div>
-          <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#a7f3d0] text-[#064e3b] p-4 rounded-md text-center cursor-pointer">
-            <Link href="/learning">📚 Discover his interests</Link>
-          </div>
-          <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#fbcfe8] text-[#8b5cf6] p-4 rounded-md text-center cursor-pointer">
-            <Link href="/projects">💻 Have some FUN!</Link>
-          </div>
+          {/** Removed Learning and Fun tiles */}
           <div className="transition duration-300 ease-in-out transform hover:scale-105 bg-[#fde68a] text-[#b45309] p-4 rounded-md text-center cursor-pointer">
             <Link href="/contact">📩 Get in touch</Link>
           </div>

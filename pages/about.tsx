@@ -14,7 +14,6 @@ function About() {
         />
       </Head>
       <div className="flex flex-col mx-10">
-        <div className="page-intro">About</div>
         <div className="mt-10 flex-auto w-full lg:w-1/2 xl:w-1/3 border-solid border-2 border-[#e0f2fe] rounded-sm self-center">
           <Image
             src={PersonalIMG}
