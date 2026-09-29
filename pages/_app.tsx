@@ -1,21 +1,14 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import Navbar from '../components/navbar'
-import Footer from '../components/footer'
-import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
-import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { Martian_Mono, Schibsted_Grotesk } from "next/font/google";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const body = Schibsted_Grotesk({ subsets: ["latin"], variable: "--font-body" });
+const mono = Martian_Mono({ subsets: ["latin"], variable: "--font-mono" });
+
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-1">
-        <Component {...pageProps} />
-      </main>
-      <Footer />
+    <div className={`${body.variable} ${mono.variable} app`}>
+      <Component {...pageProps} />
     </div>
-  )
+  );
 }
-
-export default MyApp
