@@ -25,7 +25,7 @@ export default function Signature({ text = "ANRI LOMBARD" }: { text?: string }) 
     return el;
   });
   return (
-    <svg className="signature" viewBox={`0 0 ${x - GAP + 4} 68`} role="img" aria-label={text}>
+    <svg className="signature" viewBox={`0 0 ${x - GAP + 4} 68`} aria-hidden="true">
       {paths}
     </svg>
   );

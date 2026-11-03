@@ -108,6 +108,7 @@ figcaption {
 }
 
 .topbar nav a {
+  padding: 12px 0;
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -135,15 +136,24 @@ figcaption {
 }
 
 /* ---------- hero */
-.hero {
+.showcase {
+  --stage-h: min(calc(100vh - 96px), 600px);
+  --hero-h: min(calc(100vh - 60px), 760px);
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  align-items: center;
-  gap: 24px;
+  grid-template-rows: auto auto;
+  column-gap: 40px;
   max-width: 1080px;
-  min-height: min(calc(100vh - 60px), 760px);
   margin: 0 auto;
-  padding: 24px;
+  padding: 0 24px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: var(--hero-h);
+  padding: 24px 0;
 }
 
 .signature {
@@ -215,17 +225,41 @@ figcaption {
   text-decoration-color: var(--accent);
 }
 
+.lately {
+  margin-top: 28px;
+  font-family: var(--font-mono), ui-monospace, Menlo, monospace;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  animation: rise 0.8s 1.7s both;
+}
+
+.lately a {
+  color: var(--ink);
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+}
+
+.lately a:hover {
+  text-decoration-color: var(--accent);
+}
+
 @keyframes rise {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: none; }
 }
 
 /* ---------- the little 3D Anri */
+/* spans the intro and work rows, so sticky keeps it beside the list and releases it at About */
 .stage {
-  position: relative;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: start;
+  position: sticky;
+  top: calc(60px + (100vh - 60px - var(--stage-h)) / 2);
   width: 100%;
-  aspect-ratio: 1 / 1.08;
-  max-height: 640px;
+  height: var(--stage-h);
+  margin-top: calc((var(--hero-h) - var(--stage-h)) / 2);
 }
 
 /* a fine dot grid under him, fading out towards the edges */
@@ -242,6 +276,7 @@ figcaption {
 .stage-canvas {
   position: absolute;
   inset: 0;
+  border-radius: 18px;
   touch-action: pan-y;
   cursor: grab;
 }
@@ -255,8 +290,11 @@ figcaption {
 .bubble {
   position: absolute;
   top: 4%;
-  left: 50%;
+  left: 0;
+  right: 0;
+  width: fit-content;
   max-width: 78%;
+  margin: 0 auto;
   padding: 10px 16px;
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -267,13 +305,13 @@ figcaption {
   text-align: center;
   pointer-events: none;
   opacity: 0;
-  transform: translate(-50%, 6px);
+  transform: translateY(6px);
   transition: opacity 0.2s, transform 0.2s;
 }
 
 .bubble.show {
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: none;
 }
 
 .bubble::after {
@@ -308,11 +346,22 @@ figcaption {
 }
 
 /* ---------- content blocks */
+.work-block {
+  grid-column: 1;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  scroll-margin-top: 40px;
+}
+
 .block {
-  max-width: 720px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 104px 24px 0;
   scroll-margin-top: 40px;
+}
+
+.block > * {
+  max-width: 720px;
 }
 
 .label {
@@ -332,6 +381,25 @@ figcaption {
   flex: 1;
   height: 1px;
   background: var(--line);
+}
+
+.label-hint {
+  order: 1;
+  letter-spacing: 0.06em;
+  text-transform: none;
+}
+
+.on-touch {
+  display: none;
+}
+
+@media (hover: none) {
+  .on-hover {
+    display: none;
+  }
+  .on-touch {
+    display: inline;
+  }
 }
 
 .work {
@@ -373,12 +441,12 @@ figcaption {
   transition: transform 0.2s, color 0.2s;
 }
 
-.work a:hover .work-name,
-.work a:hover .arrow {
+.work li.active .work-name,
+.work li.active .arrow {
   color: var(--accent);
 }
 
-.work a:hover .arrow {
+.work li.active .arrow {
   transform: translate(3px, -3px);
 }
 
@@ -470,7 +538,7 @@ figcaption {
 .footer {
   display: flex;
   justify-content: space-between;
-  max-width: 720px;
+  max-width: 1032px;
   margin: 120px auto 0;
   padding: 28px 24px 48px;
   border-top: 1px solid var(--line);
@@ -480,14 +548,31 @@ figcaption {
 
 /* ---------- small screens */
 @media (max-width: 760px) {
-  .hero {
-    grid-template-columns: 1fr;
+  /* block flow, because a sticky grid item could not leave its own row */
+  .showcase {
+    --stage-h: min(44vh, 320px);
+    display: block;
+  }
+  .hero-text {
     min-height: 0;
     padding-top: 48px;
+    padding-bottom: 8px;
   }
+  /* pinned under the top bar with the list scrolling beneath, so it needs a solid backdrop */
   .stage {
-    max-width: 440px;
-    margin: 0 auto;
+    top: 60px;
+    z-index: 5;
+    margin-top: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .work-block {
+    padding-top: 32px;
+    padding-bottom: 0;
+  }
+  .work {
+    /* room for the last row to reach the line just under the avatar */
+    padding-bottom: 96px;
   }
   .topbar nav {
     gap: 18px;
@@ -510,7 +595,8 @@ figcaption {
   }
   .signature path,
   .intro,
-  .hero-links {
+  .hero-links,
+  .lately {
     animation: none;
   }
   .bubble,
