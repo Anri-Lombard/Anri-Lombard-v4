@@ -189,9 +189,9 @@ export default function Home({ lately }: { lately: Lately | null }) {
               <figcaption>That&apos;s me, in animated form.</figcaption>
             </figure>
             <div className="prose">
-              <p>I aspire to engineer products that tangibly and measurably improve people&apos;s lives.</p>
-              <p>My philosophy is to dedicate time to what excites and inspires learning, with people I admire.</p>
-              <p>This simple recipe is my definition of success, leading to a perceived unbalanced life, seemingly obsessed on doing a few things all of the time, alongside a small amount of people...</p>
+              <p>I want to build things that measurably improve people&apos;s lives.</p>
+              <p>So I spend my time on what excites me and teaches me something, with people I admire.</p>
+              <p>That&apos;s my definition of success. From the outside it can look like an unbalanced life, obsessed with a few things, alongside a small number of people.</p>
               <p>To me, this is pure divinity &#127808;</p>
             </div>
           </div>
